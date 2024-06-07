@@ -79,39 +79,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/U99R.yaml">&test-U
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="java-snakeengine-event">
-<h3><a href="#java-snakeengine-event">java-snakeengine-event</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
-+DOC
-+SEQ
-=VAL &lt;tag:yaml.org,2002:str,&gt; :xxx
--SEQ
--DOC
--STR
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="java-snakeyaml-event">
-<h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
-+DOC
-+SEQ
-=VAL &lt;tag:yaml.org,2002:str,&gt; :xxx
--SEQ
--DOC
--STR
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="lua-lyaml-json">
-<h3><a href="#lua-lyaml-json">lua-lyaml-json</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>[&quot;xxx&quot;]
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_incorrect" id="perl-syck-json">
 <h3><a href="#perl-syck-json">perl-syck-json</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>[
@@ -202,13 +169,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/U99R.yaml">&test-U
   <div class="framework framework_box_invalid_incorrect" id="py-ruamel-py">
 <h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>[GenericScalar(tag=&#39;tag:yaml.org,2002:str,&#39;, content=&#39;xxx&#39;)]
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="ruby-psych-json">
-<h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>[&quot;xxx&quot;]
 </pre>
  </div>
 
@@ -309,64 +269,6 @@ Aborted (core dumped)
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="java-snakeengine-json">
-<h3><a href="#java-snakeengine-json">java-snakeengine-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; Can&#39;t construct a java object for tag:yaml.org,2002:str,; exception=Class not found: str,
- in &#39;reader&#39;, line 1, column 3:
-    - !!str, xxx
-      ^
-
-	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:343)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:231)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:220)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructSequenceStep2(BaseConstructor.java:391)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructSequence(BaseConstructor.java:375)
-	at org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlSeq.construct(SafeConstructor.java:534)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:231)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:220)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:174)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:139)
-	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
-Caused by: org.yaml.snakeyaml.error.YAMLException: Class not found: str,
-	at org.yaml.snakeyaml.constructor.Constructor.getClassForNode(Constructor.java:675)
-	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.getConstructor(Constructor.java:329)
-	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:338)
-	... 12 more
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="java-snakeyaml-json">
-<h3><a href="#java-snakeyaml-json">java-snakeyaml-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; Can&#39;t construct a java object for tag:yaml.org,2002:str,; exception=Class not found: str,
- in &#39;reader&#39;, line 1, column 3:
-    - !!str, xxx
-      ^
-
-	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:343)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:231)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:220)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructSequenceStep2(BaseConstructor.java:391)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructSequence(BaseConstructor.java:375)
-	at org.yaml.snakeyaml.constructor.SafeConstructor$ConstructYamlSeq.construct(SafeConstructor.java:534)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:231)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:220)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:174)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:139)
-	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
-Caused by: org.yaml.snakeyaml.error.YAMLException: Class not found: str,
-	at org.yaml.snakeyaml.constructor.Constructor.getClassForNode(Constructor.java:675)
-	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.getConstructor(Constructor.java:329)
-	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:338)
-	... 12 more
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="js-jsyaml-json">
 <h3><a href="#js-jsyaml-json">js-jsyaml-json</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>
@@ -386,7 +288,19 @@ YAMLException: tag suffix cannot contain flow indicator characters (1:9)
     at readDocument (/node/node_modules/js-yaml/lib/loader.js:1625:3)
     at loadDocuments (/node/node_modules/js-yaml/lib/loader.js:1688:5)
     at Object.loadAll (/node/node_modules/js-yaml/lib/loader.js:1701:19)
-    at Object.&lt;anonymous&gt; (/yaml/bin/js-jsyaml-json:7:13)
+    at Object.&lt;anonymous&gt; (/yaml/bin/js-jsyaml-json:7:13) {
+  reason: &#39;tag suffix cannot contain flow indicator characters&#39;,
+  mark: {
+    name: null,
+    buffer: &#39;- !!str, xxx\n&#39;,
+    position: 8,
+    line: 0,
+    column: 8,
+    snippet: &#39; 1 | - !!str, xxx\n-------------^&#39;
+  }
+}
+
+Node.js v20.13.1
 </pre>
  </div>
 
@@ -415,16 +329,38 @@ YAMLParseError: Tags and anchors must be separated from the next token by white 
 - !!str, xxx
        ^
 
-    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
-    at Object.resolveProps (/node/node_modules/yaml/dist/compose/resolve-props.js:116:9)
-    at Object.resolveBlockSeq (/node/node_modules/yaml/dist/compose/resolve-block-seq.js:13:36)
-    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:17:36)
-    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
-    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:32:23)
-    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:152:40)
+    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:69:34)
+    at Object.resolveProps (/node/node_modules/yaml/dist/compose/resolve-props.js:121:9)
+    at Object.resolveBlockSeq (/node/node_modules/yaml/dist/compose/resolve-block-seq.js:15:36)
+    at resolveCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:15:31)
+    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:47:16)
+    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:31:38)
+    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:33:23)
+    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:149:40)
     at next (&lt;anonymous&gt;)
-    at Composer.compose (/node/node_modules/yaml/dist/compose/composer.js:134:25)
-    at compose.next (&lt;anonymous&gt;)
+    at Composer.compose (/node/node_modules/yaml/dist/compose/composer.js:131:25) {
+  code: &#39;MISSING_CHAR&#39;,
+  pos: [ 7, 8 ],
+  linePos: [ { line: 1, col: 8 }, { line: 1, col: 9 } ]
+}
+
+Node.js v20.13.1
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="lua-lyaml-json">
+<h3><a href="#lua-lyaml-json">lua-lyaml-json</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>luajit: 1:1: did not find expected whitespace or line break
+stack traceback:
+	[C]: in function &#39;error&#39;
+	/usr/local/share/lua/5.1/lyaml/init.lua:306: in function &#39;error&#39;
+	/usr/local/share/lua/5.1/lyaml/init.lua:325: in function &#39;parse&#39;
+	/usr/local/share/lua/5.1/lyaml/init.lua:443: in function &#39;load_node&#39;
+	/usr/local/share/lua/5.1/lyaml/init.lua:393: in function &#39;load_node&#39;
+	/usr/local/share/lua/5.1/lyaml/init.lua:497: in function &#39;load&#39;
+	/yaml/bin/lua-lyaml-json:6: in main chunk
+	[C]: at 0x55adcb198ed0
 </pre>
  </div>
 
@@ -449,7 +385,7 @@ Expected  : EOL WS
 Got       : FLOW_COMMA
 Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 392
 YAML      : &quot;, xxx\n&quot;
-  at /yaml/bin/perl-pp-event line 25.
+  at /yaml/bin/perl-pp-event line 46.
 +STR
 +DOC
 +SEQ
@@ -542,20 +478,12 @@ while scanning a tag at line: 1, column: 3
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="raku-yamlish-json">
-<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Couldn&#39;t parse YAML
-  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
-  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-json line 6
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="raku-yamlish-raku">
-<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Couldn&#39;t parse YAML
-  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
-  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-raku line 6
+  <div class="framework framework_box_invalid_correct" id="ruby-psych-json">
+<h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/ruby/gems/psych/lib/psych.rb:458:in `parse&#39;: (&lt;unknown&gt;): did not find expected whitespace or line break while scanning a tag at line 1 column 3 (Psych::SyntaxError)
+	from /ruby/gems/psych/lib/psych.rb:458:in `parse_stream&#39;
+	from /ruby/gems/psych/lib/psych.rb:632:in `load_stream&#39;
+	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
 </pre>
  </div>
 

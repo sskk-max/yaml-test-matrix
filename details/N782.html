@@ -101,23 +101,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/N782.yaml">&test-N
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="raku-yamlish-json">
-<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>[ &quot;---&quot;, &quot;...&quot; ]
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="raku-yamlish-raku">
-<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>[
-  &quot;---&quot;.Str,
-  &quot;...&quot;.Str,
-]
-</pre>
- </div>
-
-
  <hr style="clear: both;">    <div class="framework framework_box_invalid_correct" id="c-libfyaml-event">
 <h3><a href="#c-libfyaml-event">c-libfyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:2:1: error: invalid document start indicator in a flow sequence
@@ -224,114 +207,6 @@ Aborted (core dumped)
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="java-snakeengine-event">
-<h3><a href="#java-snakeengine-event">java-snakeengine-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; while parsing a flow node
- in reader, line 2, column 1:
-    --- ,
-    ^
-expected the node content, but found &#39;&lt;document start&gt;&#39;
- in reader, line 2, column 1:
-    --- ,
-    ^
-
-	at org.snakeyaml.engine.v2.parser.ParserImpl.parseNode(ParserImpl.java:548)
-	at org.snakeyaml.engine.v2.parser.ParserImpl.parseFlowNode(ParserImpl.java:436)
-	at org.snakeyaml.engine.v2.parser.ParserImpl.access$2700(ParserImpl.java:130)
-	at org.snakeyaml.engine.v2.parser.ParserImpl$ParseFlowSequenceEntry.produce(ParserImpl.java:821)
-	at org.snakeyaml.engine.v2.parser.ParserImpl$ParseFlowSequenceFirstEntry.produce(ParserImpl.java:780)
-	at org.snakeyaml.engine.v2.parser.ParserImpl.lambda$produce$0(ParserImpl.java:185)
-	at java.util.Optional.ifPresent(Optional.java:159)
-	at org.snakeyaml.engine.v2.parser.ParserImpl.produce(ParserImpl.java:185)
-	at org.snakeyaml.engine.v2.parser.ParserImpl.hasNext(ParserImpl.java:210)
-	at org.yaml.editor.SnakeEngine2Events.yamlToEvents(SnakeEngine2Events.java:15)
-	at org.yaml.editor.SnakeEngine2Events.main(SnakeEngine2Events.java:23)
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="java-snakeengine-json">
-<h3><a href="#java-snakeengine-json">java-snakeengine-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; while parsing a flow node
- in &#39;reader&#39;, line 2, column 1:
-    --- ,
-    ^
-expected the node content, but found &#39;&lt;document start&gt;&#39;
- in &#39;reader&#39;, line 2, column 1:
-    --- ,
-    ^
-
-	at org.yaml.snakeyaml.parser.ParserImpl.parseNode(ParserImpl.java:526)
-	at org.yaml.snakeyaml.parser.ParserImpl.parseFlowNode(ParserImpl.java:414)
-	at org.yaml.snakeyaml.parser.ParserImpl.access$2400(ParserImpl.java:121)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseFlowSequenceEntry.produce(ParserImpl.java:785)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseFlowSequenceFirstEntry.produce(ParserImpl.java:746)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
-	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:156)
-	at org.yaml.snakeyaml.composer.Composer.composeSequenceNode(Composer.java:243)
-	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:189)
-	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:116)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:135)
-	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="java-snakeyaml-event">
-<h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; while parsing a flow node
- in &#39;reader&#39;, line 2, column 1:
-    --- ,
-    ^
-expected the node content, but found &#39;&lt;document start&gt;&#39;
- in &#39;reader&#39;, line 2, column 1:
-    --- ,
-    ^
-
-	at org.yaml.snakeyaml.parser.ParserImpl.parseNode(ParserImpl.java:526)
-	at org.yaml.snakeyaml.parser.ParserImpl.parseFlowNode(ParserImpl.java:414)
-	at org.yaml.snakeyaml.parser.ParserImpl.access$2400(ParserImpl.java:121)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseFlowSequenceEntry.produce(ParserImpl.java:785)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseFlowSequenceFirstEntry.produce(ParserImpl.java:746)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
-	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
-	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:134)
-	at org.yaml.editor.Snake2Events.main(Snake2Events.java:142)
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="java-snakeyaml-json">
-<h3><a href="#java-snakeyaml-json">java-snakeyaml-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; while parsing a flow node
- in &#39;reader&#39;, line 2, column 1:
-    --- ,
-    ^
-expected the node content, but found &#39;&lt;document start&gt;&#39;
- in &#39;reader&#39;, line 2, column 1:
-    --- ,
-    ^
-
-	at org.yaml.snakeyaml.parser.ParserImpl.parseNode(ParserImpl.java:526)
-	at org.yaml.snakeyaml.parser.ParserImpl.parseFlowNode(ParserImpl.java:414)
-	at org.yaml.snakeyaml.parser.ParserImpl.access$2400(ParserImpl.java:121)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseFlowSequenceEntry.produce(ParserImpl.java:785)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseFlowSequenceFirstEntry.produce(ParserImpl.java:746)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
-	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:156)
-	at org.yaml.snakeyaml.composer.Composer.composeSequenceNode(Composer.java:243)
-	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:189)
-	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:116)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:135)
-	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="js-jsyaml-json">
 <h3><a href="#js-jsyaml-json">js-jsyaml-json</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>
@@ -354,7 +229,19 @@ YAMLException: missed comma between flow collection entries (2:1)
     at readDocument (/node/node_modules/js-yaml/lib/loader.js:1625:3)
     at loadDocuments (/node/node_modules/js-yaml/lib/loader.js:1688:5)
     at Object.loadAll (/node/node_modules/js-yaml/lib/loader.js:1701:19)
-    at Object.&lt;anonymous&gt; (/yaml/bin/js-jsyaml-json:7:13)
+    at Object.&lt;anonymous&gt; (/yaml/bin/js-jsyaml-json:7:13) {
+  reason: &#39;missed comma between flow collection entries&#39;,
+  mark: {
+    name: null,
+    buffer: &#39;[\n--- ,\n...\n]\n&#39;,
+    position: 2,
+    line: 1,
+    column: 0,
+    snippet: &#39; 1 | [\n 2 | --- ,\n-----^\n 3 | ...\n 4 | ]&#39;
+  }
+}
+
+Node.js v20.13.1
 </pre>
  </div>
 
@@ -388,16 +275,22 @@ YAMLParseError: Flow sequence must end with a ] at line 2, column 1:
 --- ,
 ^
 
-    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
-    at Object.resolveFlowCollection (/node/node_modules/yaml/dist/compose/resolve-flow-collection.js:182:9)
-    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:21:42)
-    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
-    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:32:23)
-    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:152:40)
+    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:69:34)
+    at Object.resolveFlowCollection (/node/node_modules/yaml/dist/compose/resolve-flow-collection.js:181:9)
+    at resolveCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:16:37)
+    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:47:16)
+    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:31:38)
+    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:33:23)
+    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:149:40)
     at next (&lt;anonymous&gt;)
-    at Composer.compose (/node/node_modules/yaml/dist/compose/composer.js:134:25)
-    at compose.next (&lt;anonymous&gt;)
-    at Function.from (&lt;anonymous&gt;)
+    at Composer.compose (/node/node_modules/yaml/dist/compose/composer.js:131:25)
+    at compose.next (&lt;anonymous&gt;) {
+  code: &#39;MISSING_CHAR&#39;,
+  pos: [ 2, 3 ],
+  linePos: [ { line: 2, col: 1 }, { line: 2, col: 2 } ]
+}
+
+Node.js v20.13.1
 </pre>
  </div>
 
@@ -413,7 +306,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:393: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:497: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x55fb7b83ff97
+	[C]: at 0x55d0285bfed0
 </pre>
  </div>
 
@@ -444,7 +337,7 @@ Expected  : ALIAS COLON FLOWMAP_START FLOWSEQ_START PLAIN PLAIN_MULTI QUOTED QUO
 Got       : DOC_START
 Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 392
 YAML      : &quot;--- ,&quot;
-  at /yaml/bin/perl-pp-event line 25.
+  at /yaml/bin/perl-pp-event line 46.
 +STR
 +DOC
 +SEQ []
@@ -574,18 +467,23 @@ while parsing a flow node at line: 2, column: 1
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-event&quot;, line 7, in &lt;module&gt;
     for event in yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 46, in parse
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 75, in parse
     while loader.check_event():
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+          ^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 474, in parse_flow_sequence_first_entry
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 474, in parse_flow_sequence_first_entry
     return self.parse_flow_sequence_entry(first=True)
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 495, in parse_flow_sequence_entry
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 495, in parse_flow_sequence_entry
     return self.parse_flow_node()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 268, in parse_flow_node
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 268, in parse_flow_node
     return self.parse_node()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 371, in parse_node
-    token.start_mark)
+           ^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 369, in parse_node
+    raise ParserError(&quot;while parsing a %s node&quot; % node, start_mark,
 yaml.parser.ParserError: while parsing a flow node
 expected the node content, but found &#39;&lt;document start&gt;&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
@@ -603,28 +501,38 @@ expected the node content, but found &#39;&lt;document start&gt;&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 130, in load_all
     yield loader.get_data()
-  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
+          ^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 27, in get_node
+                                   ^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 27, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 55, in compose_document
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 55, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 82, in compose_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 82, in compose_node
     node = self.compose_sequence_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 110, in compose_sequence_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 110, in compose_sequence_node
     while not self.check_event(SequenceEndEvent):
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 474, in parse_flow_sequence_first_entry
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 474, in parse_flow_sequence_first_entry
     return self.parse_flow_sequence_entry(first=True)
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 495, in parse_flow_sequence_entry
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 495, in parse_flow_sequence_entry
     return self.parse_flow_node()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 268, in parse_flow_node
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 268, in parse_flow_node
     return self.parse_node()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 371, in parse_node
-    token.start_mark)
+           ^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 369, in parse_node
+    raise ParserError(&quot;while parsing a %s node&quot; % node, start_mark,
 yaml.parser.ParserError: while parsing a flow node
 expected the node content, but found &#39;&lt;document start&gt;&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
@@ -639,28 +547,38 @@ expected the node content, but found &#39;&lt;document start&gt;&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-py&quot;, line 36, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 130, in load_all
     yield loader.get_data()
-  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
+          ^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 27, in get_node
+                                   ^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 27, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 55, in compose_document
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 55, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 82, in compose_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 82, in compose_node
     node = self.compose_sequence_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 110, in compose_sequence_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 110, in compose_sequence_node
     while not self.check_event(SequenceEndEvent):
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 474, in parse_flow_sequence_first_entry
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 474, in parse_flow_sequence_first_entry
     return self.parse_flow_sequence_entry(first=True)
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 495, in parse_flow_sequence_entry
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 495, in parse_flow_sequence_entry
     return self.parse_flow_node()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 268, in parse_flow_node
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 268, in parse_flow_node
     return self.parse_node()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 371, in parse_node
-    token.start_mark)
+           ^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 369, in parse_node
+    raise ParserError(&quot;while parsing a %s node&quot; % node, start_mark,
 yaml.parser.ParserError: while parsing a flow node
 expected the node content, but found &#39;&lt;document start&gt;&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
@@ -673,20 +591,25 @@ expected the node content, but found &#39;&lt;document start&gt;&#39;
   <div class="framework framework_box_invalid_correct" id="py-ruamel-event">
 <h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-event&quot;, line 7, in &lt;module&gt;
-    for event in ruamel.yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1024, in parse
-    while loader._parser.check_event():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
+  File &quot;/yaml/bin/py-ruamel-event&quot;, line 9, in &lt;module&gt;
+    for event in yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/main.py&quot;, line 371, in parse
+    while parser.check_event():
+          ^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 141, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 669, in parse_flow_sequence_first_entry
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 669, in parse_flow_sequence_first_entry
     return self.parse_flow_sequence_entry(first=True)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 695, in parse_flow_sequence_entry
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 694, in parse_flow_sequence_entry
     return self.parse_flow_node()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 348, in parse_flow_node
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 352, in parse_flow_node
     return self.parse_node()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 513, in parse_node
-    token.start_mark,
+           ^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 516, in parse_node
+    raise ParserError(
 ruamel.yaml.parser.ParserError: while parsing a flow node
 expected the node content, but found &#39;&lt;document start&gt;&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
@@ -702,30 +625,40 @@ expected the node content, but found &#39;&lt;document start&gt;&#39;
   <div class="framework framework_box_invalid_correct" id="py-ruamel-json">
 <h3><a href="#py-ruamel-json">py-ruamel-json</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-json&quot;, line 19, in &lt;module&gt;
-    for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
-    yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
+  File &quot;/yaml/bin/py-ruamel-json&quot;, line 21, in &lt;module&gt;
+    for doc in yaml.load_all(sys.stdin.read()):
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/main.py&quot;, line 476, in load_all
+    yield constructor.get_data()
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/constructor.py&quot;, line 110, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 63, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 99, in compose_document
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 94, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 141, in compose_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 128, in compose_node
     node = self.compose_sequence_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 184, in compose_sequence_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 172, in compose_sequence_node
     while not self.parser.check_event(SequenceEndEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 141, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 669, in parse_flow_sequence_first_entry
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 669, in parse_flow_sequence_first_entry
     return self.parse_flow_sequence_entry(first=True)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 695, in parse_flow_sequence_entry
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 694, in parse_flow_sequence_entry
     return self.parse_flow_node()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 348, in parse_flow_node
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 352, in parse_flow_node
     return self.parse_node()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 513, in parse_node
-    token.start_mark,
+           ^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 516, in parse_node
+    raise ParserError(
 ruamel.yaml.parser.ParserError: while parsing a flow node
 expected the node content, but found &#39;&lt;document start&gt;&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
@@ -738,30 +671,40 @@ expected the node content, but found &#39;&lt;document start&gt;&#39;
   <div class="framework framework_box_invalid_correct" id="py-ruamel-py">
 <h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-py&quot;, line 36, in &lt;module&gt;
-    for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
-    yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
+  File &quot;/yaml/bin/py-ruamel-py&quot;, line 38, in &lt;module&gt;
+    for doc in yaml.load_all(sys.stdin.read()):
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/main.py&quot;, line 476, in load_all
+    yield constructor.get_data()
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/constructor.py&quot;, line 110, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 63, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 99, in compose_document
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 94, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 141, in compose_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 128, in compose_node
     node = self.compose_sequence_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 184, in compose_sequence_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 172, in compose_sequence_node
     while not self.parser.check_event(SequenceEndEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 141, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 669, in parse_flow_sequence_first_entry
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 669, in parse_flow_sequence_first_entry
     return self.parse_flow_sequence_entry(first=True)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 695, in parse_flow_sequence_entry
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 694, in parse_flow_sequence_entry
     return self.parse_flow_node()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 348, in parse_flow_node
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 352, in parse_flow_node
     return self.parse_node()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 513, in parse_node
-    token.start_mark,
+           ^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 516, in parse_node
+    raise ParserError(
 ruamel.yaml.parser.ParserError: while parsing a flow node
 expected the node content, but found &#39;&lt;document start&gt;&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
@@ -773,9 +716,9 @@ expected the node content, but found &#39;&lt;document start&gt;&#39;
 
   <div class="framework framework_box_invalid_correct" id="ruby-psych-json">
 <h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/ruby/gems/psych/lib/psych.rb:459:in `parse&#39;: (&lt;unknown&gt;): did not find expected node content while parsing a flow node at line 2 column 1 (Psych::SyntaxError)
-	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
-	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/ruby/gems/psych/lib/psych.rb:458:in `parse&#39;: (&lt;unknown&gt;): did not find expected node content while parsing a flow node at line 2 column 1 (Psych::SyntaxError)
+	from /ruby/gems/psych/lib/psych.rb:458:in `parse_stream&#39;
+	from /ruby/gems/psych/lib/psych.rb:632:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
 </pre>
  </div>

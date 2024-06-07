@@ -56,16 +56,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/8XYN.yaml">&test-8
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
-  <div class="framework framework_box_ok" id="java-snakeengine-event">
-<h3><a href="#java-snakeengine-event">java-snakeengine-event</a></h3>
-<span class="status_box color_ok">&nbsp;</span>ok   </div>
-
-
-  <div class="framework framework_box_ok" id="java-snakeyaml-event">
-<h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
-<span class="status_box color_ok">&nbsp;</span>ok   </div>
-
-
   <div class="framework framework_box_ok" id="js-yaml-event">
 <h3><a href="#js-yaml-event">js-yaml-event</a></h3>
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
@@ -106,16 +96,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/8XYN.yaml">&test-8
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
-  <div class="framework framework_box_json_ok" id="java-snakeengine-json">
-<h3><a href="#java-snakeengine-json">java-snakeengine-json</a></h3>
-<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
-
-
-  <div class="framework framework_box_json_ok" id="java-snakeyaml-json">
-<h3><a href="#java-snakeyaml-json">java-snakeyaml-json</a></h3>
-<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
-
-
   <div class="framework framework_box_json_ok" id="js-jsyaml-json">
 <h3><a href="#js-jsyaml-json">js-jsyaml-json</a></h3>
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
@@ -133,11 +113,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/8XYN.yaml">&test-8
 
   <div class="framework framework_box_json_ok" id="py-ruamel-json">
 <h3><a href="#py-ruamel-json">py-ruamel-json</a></h3>
-<span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
-
-
-  <div class="framework framework_box_json_ok" id="raku-yamlish-json">
-<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
 <span class="status_box color_json_ok">&nbsp;</span>json_ok   </div>
 
 
@@ -181,7 +156,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:393: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:497: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x563c65fcdf97
+	[C]: at 0x559e1dddaed0
 </pre>
  </div>
 
@@ -264,22 +239,28 @@ while scanning an anchor at line: 2, column: 3
 Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-event&quot;, line 7, in &lt;module&gt;
     for event in yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 46, in parse
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 75, in parse
     while loader.check_event():
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+          ^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 379, in parse_block_sequence_first_entry
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 379, in parse_block_sequence_first_entry
     return self.parse_block_sequence_entry()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 384, in parse_block_sequence_entry
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 384, in parse_block_sequence_entry
     if not self.check_token(BlockEntryToken, BlockEndToken):
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 116, in check_token
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 116, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 231, in fetch_more_tokens
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 231, in fetch_more_tokens
     return self.fetch_anchor()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 621, in fetch_anchor
+           ^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 621, in fetch_anchor
     self.tokens.append(self.scan_anchor(AnchorToken))
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 924, in scan_anchor
-    % ch, self.get_mark())
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 922, in scan_anchor
+    raise ScannerError(&quot;while scanning an %s&quot; % name, start_mark,
 yaml.scanner.ScannerError: while scanning an anchor
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 3:
     - &amp;😁 unicode anchor
@@ -297,32 +278,43 @@ expected alphabetic or numeric character, but found &#39;😁&#39;
 <span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 130, in load_all
     yield loader.get_data()
-  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
+          ^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 27, in get_node
+                                   ^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 27, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 55, in compose_document
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 55, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 82, in compose_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 82, in compose_node
     node = self.compose_sequence_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 110, in compose_sequence_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 110, in compose_sequence_node
     while not self.check_event(SequenceEndEvent):
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 379, in parse_block_sequence_first_entry
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 379, in parse_block_sequence_first_entry
     return self.parse_block_sequence_entry()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 384, in parse_block_sequence_entry
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 384, in parse_block_sequence_entry
     if not self.check_token(BlockEntryToken, BlockEndToken):
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 116, in check_token
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 116, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 231, in fetch_more_tokens
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 231, in fetch_more_tokens
     return self.fetch_anchor()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 621, in fetch_anchor
+           ^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 621, in fetch_anchor
     self.tokens.append(self.scan_anchor(AnchorToken))
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 924, in scan_anchor
-    % ch, self.get_mark())
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 922, in scan_anchor
+    raise ScannerError(&quot;while scanning an %s&quot; % name, start_mark,
 yaml.scanner.ScannerError: while scanning an anchor
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 3:
     - &amp;😁 unicode anchor
@@ -340,32 +332,43 @@ expected alphabetic or numeric character, but found &#39;😁&#39;
 <span class="status_box color_error">&nbsp;</span>error <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-py&quot;, line 36, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 130, in load_all
     yield loader.get_data()
-  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
+          ^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 27, in get_node
+                                   ^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 27, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 55, in compose_document
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 55, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 82, in compose_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 82, in compose_node
     node = self.compose_sequence_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 110, in compose_sequence_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 110, in compose_sequence_node
     while not self.check_event(SequenceEndEvent):
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 379, in parse_block_sequence_first_entry
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 379, in parse_block_sequence_first_entry
     return self.parse_block_sequence_entry()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 384, in parse_block_sequence_entry
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 384, in parse_block_sequence_entry
     if not self.check_token(BlockEntryToken, BlockEndToken):
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 116, in check_token
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 116, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 231, in fetch_more_tokens
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 231, in fetch_more_tokens
     return self.fetch_anchor()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 621, in fetch_anchor
+           ^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 621, in fetch_anchor
     self.tokens.append(self.scan_anchor(AnchorToken))
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 924, in scan_anchor
-    % ch, self.get_mark())
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 922, in scan_anchor
+    raise ScannerError(&quot;while scanning an %s&quot; % name, start_mark,
 yaml.scanner.ScannerError: while scanning an anchor
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 3:
     - &amp;😁 unicode anchor
@@ -380,9 +383,9 @@ expected alphabetic or numeric character, but found &#39;😁&#39;
 
   <div class="framework framework_box_error" id="ruby-psych-json">
 <h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
-<span class="status_box color_error">&nbsp;</span>error <pre>/ruby/gems/psych/lib/psych.rb:459:in `parse&#39;: (&lt;unknown&gt;): did not find expected alphabetic or numeric character while scanning an anchor at line 2 column 3 (Psych::SyntaxError)
-	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
-	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
+<span class="status_box color_error">&nbsp;</span>error <pre>/ruby/gems/psych/lib/psych.rb:458:in `parse&#39;: (&lt;unknown&gt;): did not find expected alphabetic or numeric character while scanning an anchor at line 2 column 3 (Psych::SyntaxError)
+	from /ruby/gems/psych/lib/psych.rb:458:in `parse_stream&#39;
+	from /ruby/gems/psych/lib/psych.rb:632:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
 </pre>
  </div>
@@ -452,16 +455,6 @@ Error: ScanError { mark: Marker { index: 6, line: 2, col: 2 }, info: &quot;while
   <div class="framework framework_box_na" id="py-ruamel-py">
 <h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>[&#39;unicode anchor&#39;]
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_na" id="raku-yamlish-raku">
-<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
-<span class="status_box color_na">&nbsp;</span>na  <pre>[
-  &quot;unicode anchor&quot;.Str,
-]
 </pre>
 
  </div>

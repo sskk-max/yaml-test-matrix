@@ -213,32 +213,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/QLJ7.yaml">&test-Q
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="java-snakeyaml-event">
-<h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
-+DOC ---
-+MAP &lt;tag:example.com,2011:A&gt;
-=VAL :a
-=VAL :b
--MAP
--DOC
-+DOC ---
-+MAP &lt;tag:example.com,2011:B&gt;
-=VAL :c
-=VAL :d
--MAP
--DOC
-+DOC ---
-+MAP &lt;tag:example.com,2011:C&gt;
-=VAL :e
-=VAL :f
--MAP
--DOC
--STR
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_incorrect" id="perl-syck-json">
 <h3><a href="#perl-syck-json">perl-syck-json</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{
@@ -413,81 +387,6 @@ Aborted (core dumped)
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="java-snakeengine-event">
-<h3><a href="#java-snakeengine-event">java-snakeengine-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; while parsing a node
- in reader, line 4, column 5:
-    --- !prefix!B
-        ^
-found undefined tag handle !prefix!
- in reader, line 4, column 5:
-    --- !prefix!B
-        ^
-
-	at org.snakeyaml.engine.v2.parser.ParserImpl.parseNode(ParserImpl.java:486)
-	at org.snakeyaml.engine.v2.parser.ParserImpl.access$1300(ParserImpl.java:130)
-	at org.snakeyaml.engine.v2.parser.ParserImpl$ParseBlockNode.produce(ParserImpl.java:431)
-	at org.snakeyaml.engine.v2.parser.ParserImpl$ParseDocumentContent.produce(ParserImpl.java:355)
-	at org.snakeyaml.engine.v2.parser.ParserImpl.lambda$produce$0(ParserImpl.java:185)
-	at java.util.Optional.ifPresent(Optional.java:159)
-	at org.snakeyaml.engine.v2.parser.ParserImpl.produce(ParserImpl.java:185)
-	at org.snakeyaml.engine.v2.parser.ParserImpl.hasNext(ParserImpl.java:210)
-	at org.yaml.editor.SnakeEngine2Events.yamlToEvents(SnakeEngine2Events.java:15)
-	at org.yaml.editor.SnakeEngine2Events.main(SnakeEngine2Events.java:23)
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="java-snakeengine-json">
-<h3><a href="#java-snakeengine-json">java-snakeengine-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; Can&#39;t construct a java object for tag:example.com,2011:A; exception=Invalid tag: tag:example.com,2011:A
- in &#39;reader&#39;, line 2, column 5:
-    --- !prefix!A
-        ^
-
-	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:343)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:231)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:220)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:174)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:139)
-	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
-Caused by: org.yaml.snakeyaml.error.YAMLException: Invalid tag: tag:example.com,2011:A
-	at org.yaml.snakeyaml.nodes.Tag.getClassName(Tag.java:125)
-	at org.yaml.snakeyaml.constructor.Constructor.getClassForNode(Constructor.java:670)
-	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.getConstructor(Constructor.java:329)
-	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:338)
-	... 7 more
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="java-snakeyaml-json">
-<h3><a href="#java-snakeyaml-json">java-snakeyaml-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; Can&#39;t construct a java object for tag:example.com,2011:A; exception=Invalid tag: tag:example.com,2011:A
- in &#39;reader&#39;, line 2, column 5:
-    --- !prefix!A
-        ^
-
-	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:343)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObjectNoCheck(BaseConstructor.java:231)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:220)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:174)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:139)
-	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
-Caused by: org.yaml.snakeyaml.error.YAMLException: Invalid tag: tag:example.com,2011:A
-	at org.yaml.snakeyaml.nodes.Tag.getClassName(Tag.java:125)
-	at org.yaml.snakeyaml.constructor.Constructor.getClassForNode(Constructor.java:670)
-	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.getConstructor(Constructor.java:329)
-	at org.yaml.snakeyaml.constructor.Constructor$ConstructYamlObject.construct(Constructor.java:338)
-	... 7 more
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="js-jsyaml-json">
 <h3><a href="#js-jsyaml-json">js-jsyaml-json</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>
@@ -510,9 +409,33 @@ YAMLException: unknown tag !&lt;tag:example.com,2011:A&gt; (4:1)
     at loadDocuments (/node/node_modules/js-yaml/lib/loader.js:1688:5)
     at Object.loadAll (/node/node_modules/js-yaml/lib/loader.js:1701:19)
     at Object.&lt;anonymous&gt; (/yaml/bin/js-jsyaml-json:7:13)
-    at Module._compile (internal/modules/cjs/loader.js:778:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
-    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32) {
+  reason: &#39;unknown tag !&lt;tag:example.com,2011:A&gt;&#39;,
+  mark: {
+    name: null,
+    buffer: &#39;%TAG !prefix! tag:example.com,2011:\n&#39; +
+      &#39;--- !prefix!A\n&#39; +
+      &#39;a: b\n&#39; +
+      &#39;--- !prefix!B\n&#39; +
+      &#39;c: d\n&#39; +
+      &#39;--- !prefix!C\n&#39; +
+      &#39;e: f\n&#39;,
+    position: 55,
+    line: 3,
+    column: 0,
+    snippet: &#39; 1 | %TAG !prefix! tag:example.com,2011:\n&#39; +
+      &#39; 2 | --- !prefix!A\n&#39; +
+      &#39; 3 | a: b\n&#39; +
+      &#39; 4 | --- !prefix!B\n&#39; +
+      &#39;-----^\n&#39; +
+      &#39; 5 | c: d\n&#39; +
+      &#39; 6 | --- !prefix!C&#39;
+  }
+}
+
+Node.js v20.13.1
 </pre>
  </div>
 
@@ -546,16 +469,22 @@ YAMLParseError: Could not resolve tag: !prefix!B at line 4, column 5:
 --- !prefix!B
     ^^^^^^^^^
 
-    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
-    at ctx.directives.tagName.msg (/node/node_modules/yaml/dist/compose/compose-collection.js:27:68)
-    at Directives.tagName (/node/node_modules/yaml/dist/doc/directives.js:126:9)
-    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:27:36)
-    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
-    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:32:23)
-    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:152:40)
+    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:69:34)
+    at /node/node_modules/yaml/dist/compose/compose-collection.js:31:58
+    at Directives.tagName (/node/node_modules/yaml/dist/doc/directives.js:136:9)
+    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:31:26)
+    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:31:38)
+    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:33:23)
+    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:149:40)
     at next (&lt;anonymous&gt;)
-    at Composer.compose (/node/node_modules/yaml/dist/compose/composer.js:134:25)
-    at compose.next (&lt;anonymous&gt;)
+    at Composer.compose (/node/node_modules/yaml/dist/compose/composer.js:131:25)
+    at compose.next (&lt;anonymous&gt;) {
+  code: &#39;TAG_RESOLVE_FAILED&#39;,
+  pos: [ 59, 68 ],
+  linePos: [ { line: 4, col: 5 }, { line: 4, col: 14 } ]
+}
+
+Node.js v20.13.1
 </pre>
  </div>
 
@@ -570,7 +499,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:443: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:497: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x55dd2390af97
+	[C]: at 0x55e51bc43ed0
 </pre>
  </div>
 
@@ -595,7 +524,7 @@ Error: unhandled exception: unknown handle: &quot;!prefix!&quot; [YamlStreamErro
   <div class="framework framework_box_invalid_correct" id="perl-pp-event">
 <h3><a href="#perl-pp-event">perl-pp-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Found undefined tag handle &#39;!prefix!&#39; at /perl5/lib/perl5/YAML/PP/Parser.pm line 994, &lt;STDIN&gt; line 1.
- at /yaml/bin/perl-pp-event line 25.
+ at /yaml/bin/perl-pp-event line 46.
 +STR
 +DOC ---
 +MAP &lt;tag:example.com,2011:A&gt;
@@ -720,16 +649,20 @@ YAML Error: Can&#39;t parse inline implicit value &#39;&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-event&quot;, line 7, in &lt;module&gt;
     for event in yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 46, in parse
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 75, in parse
     while loader.check_event():
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+          ^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 215, in parse_document_content
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 215, in parse_document_content
     return self.parse_block_node()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 265, in parse_block_node
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 265, in parse_block_node
     return self.parse_node(block=True)
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 307, in parse_node
-    tag_mark)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 305, in parse_node
+    raise ParserError(&quot;while parsing a node&quot;, start_mark,
 yaml.parser.ParserError: while parsing a node
 found undefined tag handle &#39;!prefix!&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 4, column 5:
@@ -752,24 +685,32 @@ found undefined tag handle &#39;!prefix!&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 130, in load_all
     yield loader.get_data()
-  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
+          ^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 27, in get_node
+                                   ^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 27, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 55, in compose_document
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 55, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 64, in compose_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 64, in compose_node
     if self.check_event(AliasEvent):
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 215, in parse_document_content
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 215, in parse_document_content
     return self.parse_block_node()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 265, in parse_block_node
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 265, in parse_block_node
     return self.parse_node(block=True)
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 307, in parse_node
-    tag_mark)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 305, in parse_node
+    raise ParserError(&quot;while parsing a node&quot;, start_mark,
 yaml.parser.ParserError: while parsing a node
 found undefined tag handle &#39;!prefix!&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 4, column 5:
@@ -787,24 +728,32 @@ found undefined tag handle &#39;!prefix!&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-py&quot;, line 36, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 130, in load_all
     yield loader.get_data()
-  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
+          ^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 27, in get_node
+                                   ^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 27, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 55, in compose_document
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 55, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 64, in compose_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 64, in compose_node
     if self.check_event(AliasEvent):
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 215, in parse_document_content
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 215, in parse_document_content
     return self.parse_block_node()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 265, in parse_block_node
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 265, in parse_block_node
     return self.parse_node(block=True)
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 307, in parse_node
-    tag_mark)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 305, in parse_node
+    raise ParserError(&quot;while parsing a node&quot;, start_mark,
 yaml.parser.ParserError: while parsing a node
 found undefined tag handle &#39;!prefix!&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 4, column 5:
@@ -818,18 +767,22 @@ GenericMapping(tag=&#39;tag:example.com,2011:A&#39;, content={&#39;a&#39;: &#39;
   <div class="framework framework_box_invalid_correct" id="py-ruamel-event">
 <h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-event&quot;, line 7, in &lt;module&gt;
-    for event in ruamel.yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1024, in parse
-    while loader._parser.check_event():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
+  File &quot;/yaml/bin/py-ruamel-event&quot;, line 9, in &lt;module&gt;
+    for event in yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/main.py&quot;, line 371, in parse
+    while parser.check_event():
+          ^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 141, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 279, in parse_document_content
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 286, in parse_document_content
     return self.parse_block_node()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 344, in parse_block_node
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 349, in parse_block_node
     return self.parse_node(block=True)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 398, in parse_node
-    tag_mark,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 407, in parse_node
+    raise ParserError(
 ruamel.yaml.parser.ParserError: while parsing a node
 found undefined tag handle &#39;!prefix!&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 4, column 5:
@@ -850,26 +803,34 @@ found undefined tag handle &#39;!prefix!&#39;
   <div class="framework framework_box_invalid_correct" id="py-ruamel-json">
 <h3><a href="#py-ruamel-json">py-ruamel-json</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-json&quot;, line 19, in &lt;module&gt;
-    for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
-    yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
+  File &quot;/yaml/bin/py-ruamel-json&quot;, line 21, in &lt;module&gt;
+    for doc in yaml.load_all(sys.stdin.read()):
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/main.py&quot;, line 476, in load_all
+    yield constructor.get_data()
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/constructor.py&quot;, line 110, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 63, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 99, in compose_document
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 94, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 113, in compose_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 106, in compose_node
     if self.parser.check_event(AliasEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 141, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 279, in parse_document_content
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 286, in parse_document_content
     return self.parse_block_node()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 344, in parse_block_node
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 349, in parse_block_node
     return self.parse_node(block=True)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 398, in parse_node
-    tag_mark,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 407, in parse_node
+    raise ParserError(
 ruamel.yaml.parser.ParserError: while parsing a node
 found undefined tag handle &#39;!prefix!&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 4, column 5:
@@ -885,26 +846,34 @@ found undefined tag handle &#39;!prefix!&#39;
   <div class="framework framework_box_invalid_correct" id="py-ruamel-py">
 <h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-py&quot;, line 36, in &lt;module&gt;
-    for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
-    yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
+  File &quot;/yaml/bin/py-ruamel-py&quot;, line 38, in &lt;module&gt;
+    for doc in yaml.load_all(sys.stdin.read()):
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/main.py&quot;, line 476, in load_all
+    yield constructor.get_data()
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/constructor.py&quot;, line 110, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 63, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 99, in compose_document
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 94, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 113, in compose_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 106, in compose_node
     if self.parser.check_event(AliasEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 141, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 279, in parse_document_content
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 286, in parse_document_content
     return self.parse_block_node()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 344, in parse_block_node
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 349, in parse_block_node
     return self.parse_node(block=True)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 398, in parse_node
-    tag_mark,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 407, in parse_node
+    raise ParserError(
 ruamel.yaml.parser.ParserError: while parsing a node
 found undefined tag handle &#39;!prefix!&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 4, column 5:
@@ -915,29 +884,11 @@ GenericMapping(tag=&#39;tag:example.com,2011:A&#39;, content={&#39;a&#39;: &#39;
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="raku-yamlish-json">
-<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Couldn&#39;t parse YAML
-  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
-  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-json line 6
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="raku-yamlish-raku">
-<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Couldn&#39;t parse YAML
-  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
-  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-raku line 6
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="ruby-psych-json">
 <h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/ruby/gems/psych/lib/psych.rb:459:in `parse&#39;: (&lt;unknown&gt;): found undefined tag handle while parsing a node at line 4 column 5 (Psych::SyntaxError)
-	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
-	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/ruby/gems/psych/lib/psych.rb:458:in `parse&#39;: (&lt;unknown&gt;): found undefined tag handle while parsing a node at line 4 column 5 (Psych::SyntaxError)
+	from /ruby/gems/psych/lib/psych.rb:458:in `parse_stream&#39;
+	from /ruby/gems/psych/lib/psych.rb:632:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
 </pre>
  </div>

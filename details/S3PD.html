@@ -95,40 +95,9 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/S3PD.yaml">&test-S
 <span class="status_box color_ok">&nbsp;</span>ok   </div>
 
 
- <hr style="clear: both;">             <div class="framework framework_box_error" id="java-snakeengine-event">
-<h3><a href="#java-snakeengine-event">java-snakeengine-event</a></h3>
-<span class="status_box color_error">&nbsp;</span>error <pre>Exception in thread &quot;main&quot; while parsing a block mapping
- in reader, line 1, column 1:
-    plain key: in-line value
-    ^
-expected &lt;block end&gt;, but found &#39;:&#39;
- in reader, line 2, column 1:
-    : # Both empty
-    ^
-
-	at org.snakeyaml.engine.v2.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:689)
-	at org.snakeyaml.engine.v2.parser.ParserImpl.lambda$produce$0(ParserImpl.java:185)
-	at java.util.Optional.ifPresent(Optional.java:159)
-	at org.snakeyaml.engine.v2.parser.ParserImpl.produce(ParserImpl.java:185)
-	at org.snakeyaml.engine.v2.parser.ParserImpl.hasNext(ParserImpl.java:210)
-	at org.yaml.editor.SnakeEngine2Events.yamlToEvents(SnakeEngine2Events.java:15)
-	at org.yaml.editor.SnakeEngine2Events.main(SnakeEngine2Events.java:23)
-</pre>
- </div>
-
-
-  <div class="framework framework_box_error" id="perl-syck-perl">
+ <hr style="clear: both;">             <div class="framework framework_box_error" id="perl-syck-perl">
 <h3><a href="#perl-syck-perl">perl-syck-perl</a></h3>
 <span class="status_box color_error">&nbsp;</span>error <pre>Syck parser (line 2, column 1): syntax error at /perl5/lib/perl5/x86_64-linux-thread-multi/YAML/Syck.pm line 60, &lt;&gt; line 1.
-</pre>
- </div>
-
-
-  <div class="framework framework_box_error" id="raku-yamlish-raku">
-<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
-<span class="status_box color_error">&nbsp;</span>error <pre>Couldn&#39;t parse YAML
-  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
-  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-raku line 6
 </pre>
  </div>
 
@@ -253,72 +222,6 @@ Aborted (core dumped)
  </div>
 
 
-  <div class="framework framework_box_na" id="java-snakeengine-json">
-<h3><a href="#java-snakeengine-json">java-snakeengine-json</a></h3>
-<span class="status_box color_na">&nbsp;</span>na  <pre>Exception in thread &quot;main&quot; while parsing a block mapping
- in &#39;reader&#39;, line 1, column 1:
-    plain key: in-line value
-    ^
-expected &lt;block end&gt;, but found &#39;:&#39;
- in &#39;reader&#39;, line 2, column 1:
-    : # Both empty
-    ^
-
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:660)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
-	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:59)
-	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:45)
-	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:140)
-	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:119)
-	at org.yaml.snakeyaml.composer.Composer.composeScalarNode(Composer.java:217)
-	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:187)
-	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:317)
-	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:308)
-	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:289)
-	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:191)
-	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:116)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:135)
-	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
-</pre>
-
- </div>
-
-
-  <div class="framework framework_box_na" id="java-snakeyaml-json">
-<h3><a href="#java-snakeyaml-json">java-snakeyaml-json</a></h3>
-<span class="status_box color_na">&nbsp;</span>na  <pre>Exception in thread &quot;main&quot; while parsing a block mapping
- in &#39;reader&#39;, line 1, column 1:
-    plain key: in-line value
-    ^
-expected &lt;block end&gt;, but found &#39;:&#39;
- in &#39;reader&#39;, line 2, column 1:
-    : # Both empty
-    ^
-
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:660)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
-	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:59)
-	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:45)
-	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:140)
-	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:119)
-	at org.yaml.snakeyaml.composer.Composer.composeScalarNode(Composer.java:217)
-	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:187)
-	at org.yaml.snakeyaml.composer.Composer.composeValueNode(Composer.java:317)
-	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:308)
-	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:289)
-	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:191)
-	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:116)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:135)
-	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
-</pre>
-
- </div>
-
-
   <div class="framework framework_box_na" id="js-jsyaml-json">
 <h3><a href="#js-jsyaml-json">js-jsyaml-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>
@@ -340,8 +243,24 @@ YAMLException: incomplete explicit mapping pair; a key node is missed; or follow
     at loadDocuments (/node/node_modules/js-yaml/lib/loader.js:1688:5)
     at Object.loadAll (/node/node_modules/js-yaml/lib/loader.js:1701:19)
     at Object.&lt;anonymous&gt; (/yaml/bin/js-jsyaml-json:7:13)
-    at Module._compile (internal/modules/cjs/loader.js:778:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10) {
+  reason: &#39;incomplete explicit mapping pair; a key node is missed; or followed by a non-tabulated empty line&#39;,
+  mark: {
+    name: null,
+    buffer: &#39;plain key: in-line value\n: # Both empty\n&quot;quoted key&quot;:\n- entry\n&#39;,
+    position: 25,
+    line: 1,
+    column: 0,
+    snippet: &#39; 1 | plain key: in-line value\n&#39; +
+      &#39; 2 | : # Both empty\n&#39; +
+      &#39;-----^\n&#39; +
+      &#39; 3 | &quot;quoted key&quot;:\n&#39; +
+      &#39; 4 | - entry&#39;
+  }
+}
+
+Node.js v20.13.1
 </pre>
 
  </div>
@@ -372,7 +291,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:340: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:497: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x56424ca66f97
+	[C]: at 0x5609bdd79ed0
 </pre>
 
  </div>
@@ -481,22 +400,29 @@ while parsing a block mapping at line: 1, column: 1
 <span class="status_box color_na">&nbsp;</span>na  <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 130, in load_all
     yield loader.get_data()
-  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
+          ^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 27, in get_node
+                                   ^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 27, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 55, in compose_document
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 55, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 84, in compose_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 84, in compose_node
     node = self.compose_mapping_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 127, in compose_mapping_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 127, in compose_mapping_node
     while not self.check_event(MappingEndEvent):
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 439, in parse_block_mapping_key
-    &quot;expected &lt;block end&gt;, but found %r&quot; % token.id, token.start_mark)
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 438, in parse_block_mapping_key
+    raise ParserError(&quot;while parsing a block mapping&quot;, self.marks[-1],
 yaml.parser.ParserError: while parsing a block mapping
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
     plain key: in-line value
@@ -514,16 +440,20 @@ expected &lt;block end&gt;, but found &#39;:&#39;
 <h3><a href="#py-ruamel-json">py-ruamel-json</a></h3>
 <span class="status_box color_na">&nbsp;</span>na  <pre>Error json.dumps: &lt;class &#39;TypeError&#39;&gt;
 Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-json&quot;, line 21, in &lt;module&gt;
+  File &quot;/yaml/bin/py-ruamel-json&quot;, line 23, in &lt;module&gt;
     print(json.dumps(doc, sort_keys=True, skipkeys=True, indent=2))
-  File &quot;/usr/lib/python3.7/json/__init__.py&quot;, line 238, in dumps
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/usr/lib/python3.12/json/__init__.py&quot;, line 238, in dumps
     **kw).encode(obj)
-  File &quot;/usr/lib/python3.7/json/encoder.py&quot;, line 201, in encode
+          ^^^^^^^^^^^
+  File &quot;/usr/lib/python3.12/json/encoder.py&quot;, line 202, in encode
     chunks = list(chunks)
-  File &quot;/usr/lib/python3.7/json/encoder.py&quot;, line 431, in _iterencode
+             ^^^^^^^^^^^^
+  File &quot;/usr/lib/python3.12/json/encoder.py&quot;, line 432, in _iterencode
     yield from _iterencode_dict(o, _current_indent_level)
-  File &quot;/usr/lib/python3.7/json/encoder.py&quot;, line 353, in _iterencode_dict
-    items = sorted(dct.items(), key=lambda kv: kv[0])
+  File &quot;/usr/lib/python3.12/json/encoder.py&quot;, line 354, in _iterencode_dict
+    items = sorted(dct.items())
+            ^^^^^^^^^^^^^^^^^^^
 TypeError: &#39;&lt;&#39; not supported between instances of &#39;NoneType&#39; and &#39;str&#39;
 </pre>
 
@@ -538,21 +468,11 @@ TypeError: &#39;&lt;&#39; not supported between instances of &#39;NoneType&#39; 
  </div>
 
 
-  <div class="framework framework_box_na" id="raku-yamlish-json">
-<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
-<span class="status_box color_na">&nbsp;</span>na  <pre>Couldn&#39;t parse YAML
-  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
-  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-json line 6
-</pre>
-
- </div>
-
-
   <div class="framework framework_box_na" id="ruby-psych-json">
 <h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
-<span class="status_box color_na">&nbsp;</span>na  <pre>/ruby/gems/psych/lib/psych.rb:459:in `parse&#39;: (&lt;unknown&gt;): did not find expected key while parsing a block mapping at line 1 column 1 (Psych::SyntaxError)
-	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
-	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
+<span class="status_box color_na">&nbsp;</span>na  <pre>/ruby/gems/psych/lib/psych.rb:458:in `parse&#39;: (&lt;unknown&gt;): did not find expected key while parsing a block mapping at line 1 column 1 (Psych::SyntaxError)
+	from /ruby/gems/psych/lib/psych.rb:458:in `parse_stream&#39;
+	from /ruby/gems/psych/lib/psych.rb:632:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
 </pre>
 
@@ -567,26 +487,6 @@ TypeError: &#39;&lt;&#39; not supported between instances of &#39;NoneType&#39; 
 =VAL :plain key
 =VAL :in-line value
 Parse error: did not find expected key
-</pre>
- </div>
-
-
-  <div class="framework framework_box_ni" id="java-snakeyaml-event">
-<h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
-<span class="status_box color_ni">&nbsp;</span>ni <pre>Exception in thread &quot;main&quot; while parsing a block mapping
- in &#39;reader&#39;, line 1, column 1:
-    plain key: in-line value
-    ^
-expected &lt;block end&gt;, but found &#39;:&#39;
- in &#39;reader&#39;, line 2, column 1:
-    : # Both empty
-    ^
-
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingKey.produce(ParserImpl.java:660)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
-	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
-	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:134)
-	at org.yaml.editor.Snake2Events.main(Snake2Events.java:142)
 </pre>
  </div>
 
@@ -632,12 +532,14 @@ while parsing a block mapping at line: 1, column: 1
 Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-event&quot;, line 7, in &lt;module&gt;
     for event in yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 46, in parse
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 75, in parse
     while loader.check_event():
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+          ^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 439, in parse_block_mapping_key
-    &quot;expected &lt;block end&gt;, but found %r&quot; % token.id, token.start_mark)
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 438, in parse_block_mapping_key
+    raise ParserError(&quot;while parsing a block mapping&quot;, self.marks[-1],
 yaml.parser.ParserError: while parsing a block mapping
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
     plain key: in-line value
@@ -655,22 +557,29 @@ expected &lt;block end&gt;, but found &#39;:&#39;
 <span class="status_box color_ni">&nbsp;</span>ni <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-py&quot;, line 36, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 130, in load_all
     yield loader.get_data()
-  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
+          ^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 27, in get_node
+                                   ^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 27, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 55, in compose_document
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 55, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 84, in compose_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 84, in compose_node
     node = self.compose_mapping_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 127, in compose_mapping_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 127, in compose_mapping_node
     while not self.check_event(MappingEndEvent):
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 439, in parse_block_mapping_key
-    &quot;expected &lt;block end&gt;, but found %r&quot; % token.id, token.start_mark)
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 438, in parse_block_mapping_key
+    raise ParserError(&quot;while parsing a block mapping&quot;, self.marks[-1],
 yaml.parser.ParserError: while parsing a block mapping
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
     plain key: in-line value

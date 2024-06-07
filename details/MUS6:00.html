@@ -98,24 +98,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/MUS6.yaml">&test-M
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="js-yaml-event">
-<h3><a href="#js-yaml-event">js-yaml-event</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
-+DOC ---
-=VAL :
--DOC
--STR
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="js-yaml-json">
-<h3><a href="#js-yaml-json">js-yaml-json</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>null
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_incorrect" id="lua-lyaml-json">
 <h3><a href="#lua-lyaml-json">lua-lyaml-json</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{}
@@ -241,114 +223,6 @@ yaml-cpp: error at line 1, column 1: bad YAML version: 1.1#...
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="java-snakeengine-event">
-<h3><a href="#java-snakeengine-event">java-snakeengine-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; while scanning a directive
- in reader, line 1, column 1:
-    %YAML 1.1#...
-    ^
-expected a digit or &#39; &#39;, but found #(35)
- in reader, line 1, column 10:
-    %YAML 1.1#...
-             ^
-
-	at org.snakeyaml.engine.v2.scanner.ScannerImpl.scanYamlDirectiveValue(ScannerImpl.java:1274)
-	at org.snakeyaml.engine.v2.scanner.ScannerImpl.scanDirective(ScannerImpl.java:1201)
-	at org.snakeyaml.engine.v2.scanner.ScannerImpl.fetchDirective(ScannerImpl.java:601)
-	at org.snakeyaml.engine.v2.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:298)
-	at org.snakeyaml.engine.v2.scanner.ScannerImpl.checkToken(ScannerImpl.java:193)
-	at org.snakeyaml.engine.v2.parser.ParserImpl$ParseImplicitDocumentStart.produce(ParserImpl.java:246)
-	at org.snakeyaml.engine.v2.parser.ParserImpl.lambda$produce$0(ParserImpl.java:185)
-	at java.util.Optional.ifPresent(Optional.java:159)
-	at org.snakeyaml.engine.v2.parser.ParserImpl.produce(ParserImpl.java:185)
-	at org.snakeyaml.engine.v2.parser.ParserImpl.hasNext(ParserImpl.java:210)
-	at org.yaml.editor.SnakeEngine2Events.yamlToEvents(SnakeEngine2Events.java:15)
-	at org.yaml.editor.SnakeEngine2Events.main(SnakeEngine2Events.java:23)
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="java-snakeengine-json">
-<h3><a href="#java-snakeengine-json">java-snakeengine-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; while scanning a directive
- in &#39;reader&#39;, line 1, column 1:
-    %YAML 1.1#...
-    ^
-expected a digit or &#39; &#39;, but found #(35)
- in &#39;reader&#39;, line 1, column 10:
-    %YAML 1.1#...
-             ^
-
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanYamlDirectiveValue(ScannerImpl.java:1375)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanDirective(ScannerImpl.java:1300)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchDirective(ScannerImpl.java:659)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:346)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseImplicitDocumentStart.produce(ParserImpl.java:214)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
-	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:156)
-	at org.yaml.snakeyaml.composer.Composer.checkNode(Composer.java:94)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.checkData(BaseConstructor.java:124)
-	at org.yaml.snakeyaml.Yaml$1.hasNext(Yaml.java:509)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="java-snakeyaml-event">
-<h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; while scanning a directive
- in &#39;reader&#39;, line 1, column 1:
-    %YAML 1.1#...
-    ^
-expected a digit or &#39; &#39;, but found #(35)
- in &#39;reader&#39;, line 1, column 10:
-    %YAML 1.1#...
-             ^
-
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanYamlDirectiveValue(ScannerImpl.java:1375)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanDirective(ScannerImpl.java:1300)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchDirective(ScannerImpl.java:659)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:346)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseImplicitDocumentStart.produce(ParserImpl.java:214)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
-	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
-	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:134)
-	at org.yaml.editor.Snake2Events.main(Snake2Events.java:142)
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="java-snakeyaml-json">
-<h3><a href="#java-snakeyaml-json">java-snakeyaml-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; while scanning a directive
- in &#39;reader&#39;, line 1, column 1:
-    %YAML 1.1#...
-    ^
-expected a digit or &#39; &#39;, but found #(35)
- in &#39;reader&#39;, line 1, column 10:
-    %YAML 1.1#...
-             ^
-
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanYamlDirectiveValue(ScannerImpl.java:1375)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanDirective(ScannerImpl.java:1300)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchDirective(ScannerImpl.java:659)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:346)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseImplicitDocumentStart.produce(ParserImpl.java:214)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
-	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:156)
-	at org.yaml.snakeyaml.composer.Composer.checkNode(Composer.java:94)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.checkData(BaseConstructor.java:124)
-	at org.yaml.snakeyaml.Yaml$1.hasNext(Yaml.java:509)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="js-jsyaml-json">
 <h3><a href="#js-jsyaml-json">js-jsyaml-json</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>
@@ -367,9 +241,63 @@ YAMLException: ill-formed argument of the YAML directive (2:1)
     at loadDocuments (/node/node_modules/js-yaml/lib/loader.js:1688:5)
     at Object.loadAll (/node/node_modules/js-yaml/lib/loader.js:1701:19)
     at Object.&lt;anonymous&gt; (/yaml/bin/js-jsyaml-json:7:13)
-    at Module._compile (internal/modules/cjs/loader.js:778:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
-    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32) {
+  reason: &#39;ill-formed argument of the YAML directive&#39;,
+  mark: {
+    name: null,
+    buffer: &#39;%YAML 1.1#...\n---\n&#39;,
+    position: 14,
+    line: 1,
+    column: 0,
+    snippet: &#39; 1 | %YAML 1.1#...\n 2 | ---\n-----^&#39;
+  }
+}
+
+Node.js v20.13.1
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="js-yaml-event">
+<h3><a href="#js-yaml-event">js-yaml-event</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Unsupported YAML version 1.1#... at line 1, column 7:
+
+%YAML 1.1#...
+      ^^^^^^^
++STR
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="js-yaml-json">
+<h3><a href="#js-yaml-json">js-yaml-json</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/yaml/bin/js-yaml-json:8
+  if (doc.errors.length !== 0) throw doc.errors[0]
+                               ^
+
+YAMLParseError: Unsupported YAML version 1.1#... at line 1, column 7:
+
+%YAML 1.1#...
+      ^^^^^^^
+
+    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:69:34)
+    at /node/node_modules/yaml/dist/compose/composer.js:143:26
+    at Directives.add (/node/node_modules/yaml/dist/doc/directives.js:89:21)
+    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:140:33)
+    at next (&lt;anonymous&gt;)
+    at Composer.compose (/node/node_modules/yaml/dist/compose/composer.js:131:25)
+    at compose.next (&lt;anonymous&gt;)
+    at Function.from (&lt;anonymous&gt;)
+    at Object.parseAllDocuments (/node/node_modules/yaml/dist/public-api.js:28:24)
+    at Object.&lt;anonymous&gt; (/yaml/bin/js-yaml-json:7:19) {
+  code: &#39;BAD_DIRECTIVE&#39;,
+  pos: [ 6, 13 ],
+  linePos: [ { line: 1, col: 7 }, { line: 1, col: 14 } ]
+}
+
+Node.js v20.13.1
 </pre>
  </div>
 
@@ -387,13 +315,14 @@ Error: unhandled exception: Illegal character in YAML version string: &quot;#&qu
   <div class="framework framework_box_invalid_correct" id="perl-pp-event">
 <h3><a href="#perl-pp-event">perl-pp-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 1
-Column    : 10
-Expected  : EOL WS
+Column    : 1
+Expected  : ALIAS BLOCK_SCALAR COLON DOC_END DOC_START EOL FLOWMAP_START FLOWSEQ_START PLAIN PLAIN_MULTI QUESTION QUOTED QUOTED_MULTILINE WS
 Got       : Invalid directive
 Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 392
-YAML      : &quot;#...&quot;
-  at /yaml/bin/perl-pp-event line 25.
+YAML      : &quot;%YAML 1.1#...\n&quot;
+  at /yaml/bin/perl-pp-event line 46.
 +STR
++DOC
 </pre>
  </div>
 
@@ -401,11 +330,11 @@ YAML      : &quot;#...&quot;
   <div class="framework framework_box_invalid_correct" id="perl-pp-json">
 <h3><a href="#perl-pp-json">perl-pp-json</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 1
-Column    : 10
-Expected  : EOL WS
+Column    : 1
+Expected  : ALIAS BLOCK_SCALAR COLON DOC_END DOC_START EOL FLOWMAP_START FLOWSEQ_START PLAIN PLAIN_MULTI QUESTION QUOTED QUOTED_MULTILINE WS
 Got       : Invalid directive
 Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 392
-YAML      : &quot;#...&quot;
+YAML      : &quot;%YAML 1.1#...\n&quot;
   at /perl5/lib/perl5/YAML/PP/Loader.pm line 94.
 </pre>
  </div>
@@ -414,11 +343,11 @@ YAML      : &quot;#...&quot;
   <div class="framework framework_box_invalid_correct" id="perl-pp-perl">
 <h3><a href="#perl-pp-perl">perl-pp-perl</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 1
-Column    : 10
-Expected  : EOL WS
+Column    : 1
+Expected  : ALIAS BLOCK_SCALAR COLON DOC_END DOC_START EOL FLOWMAP_START FLOWSEQ_START PLAIN PLAIN_MULTI QUESTION QUOTED QUOTED_MULTILINE WS
 Got       : Invalid directive
 Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 392
-YAML      : &quot;#...&quot;
+YAML      : &quot;%YAML 1.1#...\n&quot;
   at /perl5/lib/perl5/YAML/PP/Loader.pm line 94.
 </pre>
  </div>
@@ -458,22 +387,28 @@ YAML      : &quot;#...&quot;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-event&quot;, line 7, in &lt;module&gt;
     for event in yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 46, in parse
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 75, in parse
     while loader.check_event():
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+          ^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 143, in parse_implicit_document_start
-    StreamEndToken):
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 116, in check_token
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 142, in parse_implicit_document_start
+    if not self.check_token(DirectiveToken, DocumentStartToken,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 116, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 177, in fetch_more_tokens
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 177, in fetch_more_tokens
     return self.fetch_directive()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 400, in fetch_directive
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 400, in fetch_directive
     self.tokens.append(self.scan_directive())
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 794, in scan_directive
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 794, in scan_directive
     value = self.scan_yaml_directive_value(start_mark)
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 841, in scan_yaml_directive_value
-    self.get_mark())
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 839, in scan_yaml_directive_value
+    raise ScannerError(&quot;while scanning a directive&quot;, start_mark,
 yaml.scanner.ScannerError: while scanning a directive
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
     %YAML 1.1#...
@@ -492,26 +427,34 @@ expected a digit or &#39; &#39;, but found &#39;#&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 92, in load_all
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 129, in load_all
     while loader.check_data():
-  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 32, in check_data
+          ^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/constructor.py&quot;, line 32, in check_data
     return self.check_node()
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 22, in check_node
+           ^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 22, in check_node
     return not self.check_event(StreamEndEvent)
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 143, in parse_implicit_document_start
-    StreamEndToken):
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 116, in check_token
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 142, in parse_implicit_document_start
+    if not self.check_token(DirectiveToken, DocumentStartToken,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 116, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 177, in fetch_more_tokens
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 177, in fetch_more_tokens
     return self.fetch_directive()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 400, in fetch_directive
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 400, in fetch_directive
     self.tokens.append(self.scan_directive())
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 794, in scan_directive
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 794, in scan_directive
     value = self.scan_yaml_directive_value(start_mark)
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 841, in scan_yaml_directive_value
-    self.get_mark())
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 839, in scan_yaml_directive_value
+    raise ScannerError(&quot;while scanning a directive&quot;, start_mark,
 yaml.scanner.ScannerError: while scanning a directive
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
     %YAML 1.1#...
@@ -529,26 +472,34 @@ expected a digit or &#39; &#39;, but found &#39;#&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-py&quot;, line 36, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 92, in load_all
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 129, in load_all
     while loader.check_data():
-  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 32, in check_data
+          ^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/constructor.py&quot;, line 32, in check_data
     return self.check_node()
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 22, in check_node
+           ^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 22, in check_node
     return not self.check_event(StreamEndEvent)
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 143, in parse_implicit_document_start
-    StreamEndToken):
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 116, in check_token
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 142, in parse_implicit_document_start
+    if not self.check_token(DirectiveToken, DocumentStartToken,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 116, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 177, in fetch_more_tokens
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 177, in fetch_more_tokens
     return self.fetch_directive()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 400, in fetch_directive
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 400, in fetch_directive
     self.tokens.append(self.scan_directive())
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 794, in scan_directive
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 794, in scan_directive
     value = self.scan_yaml_directive_value(start_mark)
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 841, in scan_yaml_directive_value
-    self.get_mark())
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 839, in scan_yaml_directive_value
+    raise ScannerError(&quot;while scanning a directive&quot;, start_mark,
 yaml.scanner.ScannerError: while scanning a directive
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
     %YAML 1.1#...
@@ -564,24 +515,30 @@ expected a digit or &#39; &#39;, but found &#39;#&#39;
   <div class="framework framework_box_invalid_correct" id="py-ruamel-event">
 <h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-event&quot;, line 7, in &lt;module&gt;
-    for event in ruamel.yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1024, in parse
-    while loader._parser.check_event():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
+  File &quot;/yaml/bin/py-ruamel-event&quot;, line 9, in &lt;module&gt;
+    for event in yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/main.py&quot;, line 371, in parse
+    while parser.check_event():
+          ^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 141, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 196, in parse_implicit_document_start
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 187, in parse_implicit_document_start
     if not self.scanner.check_token(DirectiveToken, DocumentStartToken, StreamEndToken):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 170, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 242, in fetch_more_tokens
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 232, in fetch_more_tokens
     return self.fetch_directive()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 480, in fetch_directive
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 461, in fetch_directive
     self.tokens.append(self.scan_directive())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 900, in scan_directive
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 853, in scan_directive
     value = self.scan_yaml_directive_value(start_mark)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 962, in scan_yaml_directive_value
-    self.reader.get_mark(),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 909, in scan_yaml_directive_value
+    raise ScannerError(
 ruamel.yaml.scanner.ScannerError: while scanning a directive
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
     %YAML 1.1#...
@@ -598,28 +555,36 @@ expected a digit or &#39;.&#39;, but found &#39;#&#39;
   <div class="framework framework_box_invalid_correct" id="py-ruamel-json">
 <h3><a href="#py-ruamel-json">py-ruamel-json</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-json&quot;, line 19, in &lt;module&gt;
-    for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1096, in load_all
-    while loader._constructor.check_data():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 108, in check_data
+  File &quot;/yaml/bin/py-ruamel-json&quot;, line 21, in &lt;module&gt;
+    for doc in yaml.load_all(sys.stdin.read()):
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/main.py&quot;, line 475, in load_all
+    while constructor.check_data():
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/constructor.py&quot;, line 105, in check_data
     return self.composer.check_node()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 60, in check_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 58, in check_node
     return not self.parser.check_event(StreamEndEvent)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 141, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 196, in parse_implicit_document_start
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 187, in parse_implicit_document_start
     if not self.scanner.check_token(DirectiveToken, DocumentStartToken, StreamEndToken):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 170, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 242, in fetch_more_tokens
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 232, in fetch_more_tokens
     return self.fetch_directive()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 480, in fetch_directive
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 461, in fetch_directive
     self.tokens.append(self.scan_directive())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 900, in scan_directive
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 853, in scan_directive
     value = self.scan_yaml_directive_value(start_mark)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 962, in scan_yaml_directive_value
-    self.reader.get_mark(),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 909, in scan_yaml_directive_value
+    raise ScannerError(
 ruamel.yaml.scanner.ScannerError: while scanning a directive
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
     %YAML 1.1#...
@@ -635,28 +600,36 @@ expected a digit or &#39;.&#39;, but found &#39;#&#39;
   <div class="framework framework_box_invalid_correct" id="py-ruamel-py">
 <h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-py&quot;, line 36, in &lt;module&gt;
-    for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1096, in load_all
-    while loader._constructor.check_data():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 108, in check_data
+  File &quot;/yaml/bin/py-ruamel-py&quot;, line 38, in &lt;module&gt;
+    for doc in yaml.load_all(sys.stdin.read()):
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/main.py&quot;, line 475, in load_all
+    while constructor.check_data():
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/constructor.py&quot;, line 105, in check_data
     return self.composer.check_node()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 60, in check_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 58, in check_node
     return not self.parser.check_event(StreamEndEvent)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 141, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 196, in parse_implicit_document_start
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 187, in parse_implicit_document_start
     if not self.scanner.check_token(DirectiveToken, DocumentStartToken, StreamEndToken):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 170, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 242, in fetch_more_tokens
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 232, in fetch_more_tokens
     return self.fetch_directive()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 480, in fetch_directive
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 461, in fetch_directive
     self.tokens.append(self.scan_directive())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 900, in scan_directive
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 853, in scan_directive
     value = self.scan_yaml_directive_value(start_mark)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 962, in scan_yaml_directive_value
-    self.reader.get_mark(),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 909, in scan_yaml_directive_value
+    raise ScannerError(
 ruamel.yaml.scanner.ScannerError: while scanning a directive
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 1:
     %YAML 1.1#...
@@ -665,24 +638,6 @@ expected a digit or &#39;.&#39;, but found &#39;#&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 10:
     %YAML 1.1#...
              ^ (line: 1)
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="raku-yamlish-json">
-<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Couldn&#39;t parse YAML
-  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
-  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-json line 6
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="raku-yamlish-raku">
-<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Couldn&#39;t parse YAML
-  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
-  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-raku line 6
 </pre>
  </div>
 

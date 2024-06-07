@@ -119,52 +119,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/S98Z.yaml">&test-S
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="java-snakeengine-event">
-<h3><a href="#java-snakeengine-event">java-snakeengine-event</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
-+DOC
-+MAP
-=VAL :empty block scalar
-=VAL &gt;
--MAP
--DOC
--STR
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="java-snakeengine-json">
-<h3><a href="#java-snakeengine-json">java-snakeengine-json</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{
-  &quot;empty block scalar&quot;: &quot;&quot;
-}
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="java-snakeyaml-event">
-<h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
-+DOC
-+MAP
-=VAL :empty block scalar
-=VAL &gt;
--MAP
--DOC
--STR
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="java-snakeyaml-json">
-<h3><a href="#java-snakeyaml-json">java-snakeyaml-json</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{
-  &quot;empty block scalar&quot;: &quot;&quot;
-}
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_incorrect" id="js-jsyaml-json">
 <h3><a href="#js-jsyaml-json">js-jsyaml-json</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{&quot;empty block scalar&quot;:&quot;&quot;}
@@ -317,52 +271,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/S98Z.yaml">&test-S
   <div class="framework framework_box_invalid_incorrect" id="py-pyyaml-py">
 <h3><a href="#py-pyyaml-py">py-pyyaml-py</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{&#39;empty block scalar&#39;: &#39;&#39;}
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="py-ruamel-event">
-<h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
-+DOC
-+MAP
-=VAL :empty block scalar
-=VAL &gt;
--MAP
--DOC
--STR
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="py-ruamel-json">
-<h3><a href="#py-ruamel-json">py-ruamel-json</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{
-  &quot;empty block scalar&quot;: &quot;&quot;
-}
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="py-ruamel-py">
-<h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{&#39;empty block scalar&#39;: &#39;&#39;}
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="raku-yamlish-json">
-<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{ &quot;empty block scalar&quot; : &quot;\n\n\n# comment\n&quot; }
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="raku-yamlish-raku">
-<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{
-  empty block scalar =&gt; &quot;\n\n\n# comment\n&quot;.Str,
-}
 </pre>
  </div>
 
@@ -526,16 +434,22 @@ YAMLParseError: Block scalars with more-indented leading empty lines must use an
  # comment
  ^
 
-    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
-    at Object.resolveBlockScalar (/node/node_modules/yaml/dist/compose/resolve-block-scalar.js:42:17)
+    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:69:34)
+    at Object.resolveBlockScalar (/node/node_modules/yaml/dist/compose/resolve-block-scalar.js:44:17)
     at Object.composeScalar (/node/node_modules/yaml/dist/compose/compose-scalar.js:10:30)
-    at composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:23:34)
-    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:79:19)
-    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:36)
-    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
-    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:32:23)
-    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:152:40)
-    at next (&lt;anonymous&gt;)
+    at composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:24:34)
+    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:81:19)
+    at resolveCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:27)
+    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:47:16)
+    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:31:38)
+    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:33:23)
+    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:149:40) {
+  code: &#39;MISSING_CHAR&#39;,
+  pos: [ 32, 33 ],
+  linePos: [ { line: 5, col: 2 }, { line: 5, col: 3 } ]
+}
+
+Node.js v20.13.1
 </pre>
  </div>
 
@@ -570,6 +484,157 @@ Error: unhandled exception: Leading all-spaces line contains too many spaces [Ya
   <div class="framework framework_box_invalid_correct" id="perl-tiny-perl">
 <h3><a href="#perl-tiny-perl">perl-tiny-perl</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>YAML::Tiny failed to find multi-line scalar content at /yaml/bin/perl-tiny-perl line 15.
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="py-ruamel-event">
+<h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-ruamel-event&quot;, line 9, in &lt;module&gt;
+    for event in yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/main.py&quot;, line 371, in parse
+    while parser.check_event():
+          ^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 141, in check_event
+    self.current_event = self.state()
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 631, in parse_block_mapping_value
+    if self.scanner.check_token(ValueToken):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 170, in check_token
+    self.fetch_more_tokens()
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 298, in fetch_more_tokens
+    return self.fetch_folded()
+           ^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 683, in fetch_folded
+    self.fetch_block_scalar(style=&#39;&gt;&#39;)
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 691, in fetch_block_scalar
+    self.tokens.append(self.scan_block_scalar(style))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 1128, in scan_block_scalar
+    breaks, max_indent, end_mark = self.scan_block_scalar_indentation()
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 1317, in scan_block_scalar_indentation
+    raise ScannerError(
+ruamel.yaml.scanner.ScannerError: more indented follow up line than first in a block scalar
+  in &quot;&lt;unicode string&gt;&quot;, line 5, column 2:
+     # comment
+     ^ (line: 5)
++STR
++DOC
++MAP
+=VAL :empty block scalar
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="py-ruamel-json">
+<h3><a href="#py-ruamel-json">py-ruamel-json</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-ruamel-json&quot;, line 21, in &lt;module&gt;
+    for doc in yaml.load_all(sys.stdin.read()):
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/main.py&quot;, line 476, in load_all
+    yield constructor.get_data()
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/constructor.py&quot;, line 110, in get_data
+    return self.construct_document(self.composer.get_node())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 63, in get_node
+    return self.compose_document()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 94, in compose_document
+    node = self.compose_node(None, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 130, in compose_node
+    node = self.compose_mapping_node(anchor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 211, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 106, in compose_node
+    if self.parser.check_event(AliasEvent):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 141, in check_event
+    self.current_event = self.state()
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 631, in parse_block_mapping_value
+    if self.scanner.check_token(ValueToken):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 170, in check_token
+    self.fetch_more_tokens()
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 298, in fetch_more_tokens
+    return self.fetch_folded()
+           ^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 683, in fetch_folded
+    self.fetch_block_scalar(style=&#39;&gt;&#39;)
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 691, in fetch_block_scalar
+    self.tokens.append(self.scan_block_scalar(style))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 1128, in scan_block_scalar
+    breaks, max_indent, end_mark = self.scan_block_scalar_indentation()
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 1317, in scan_block_scalar_indentation
+    raise ScannerError(
+ruamel.yaml.scanner.ScannerError: more indented follow up line than first in a block scalar
+  in &quot;&lt;unicode string&gt;&quot;, line 5, column 2:
+     # comment
+     ^ (line: 5)
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="py-ruamel-py">
+<h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-ruamel-py&quot;, line 38, in &lt;module&gt;
+    for doc in yaml.load_all(sys.stdin.read()):
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/main.py&quot;, line 476, in load_all
+    yield constructor.get_data()
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/constructor.py&quot;, line 110, in get_data
+    return self.construct_document(self.composer.get_node())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 63, in get_node
+    return self.compose_document()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 94, in compose_document
+    node = self.compose_node(None, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 130, in compose_node
+    node = self.compose_mapping_node(anchor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 211, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 106, in compose_node
+    if self.parser.check_event(AliasEvent):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 141, in check_event
+    self.current_event = self.state()
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 631, in parse_block_mapping_value
+    if self.scanner.check_token(ValueToken):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 170, in check_token
+    self.fetch_more_tokens()
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 298, in fetch_more_tokens
+    return self.fetch_folded()
+           ^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 683, in fetch_folded
+    self.fetch_block_scalar(style=&#39;&gt;&#39;)
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 691, in fetch_block_scalar
+    self.tokens.append(self.scan_block_scalar(style))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 1128, in scan_block_scalar
+    breaks, max_indent, end_mark = self.scan_block_scalar_indentation()
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 1317, in scan_block_scalar_indentation
+    raise ScannerError(
+ruamel.yaml.scanner.ScannerError: more indented follow up line than first in a block scalar
+  in &quot;&lt;unicode string&gt;&quot;, line 5, column 2:
+     # comment
+     ^ (line: 5)
 </pre>
  </div>
 

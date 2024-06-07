@@ -143,41 +143,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/3HFZ.yaml">&test-3
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="py-ruamel-event">
-<h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
-+DOC ---
-+MAP
-=VAL :key
-=VAL :value
--MAP
--DOC ...
-+DOC
-=VAL :invalid
--DOC
--STR
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="py-ruamel-json">
-<h3><a href="#py-ruamel-json">py-ruamel-json</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{
-  &quot;key&quot;: &quot;value&quot;
-}
-&quot;invalid&quot;
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="py-ruamel-py">
-<h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{&#39;key&#39;: &#39;value&#39;}
-&#39;invalid&#39;
-</pre>
- </div>
-
-
  <hr style="clear: both;">    <div class="framework framework_box_invalid_correct" id="c-libfyaml-event">
 <h3><a href="#c-libfyaml-event">c-libfyaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>stdin:3:5: error: invalid content after document end marker
@@ -280,84 +245,6 @@ Aborted (core dumped)
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="java-snakeengine-event">
-<h3><a href="#java-snakeengine-event">java-snakeengine-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; expected &#39;&lt;document start&gt;&#39;, but found &#39;&lt;scalar&gt;&#39;
- in reader, line 3, column 5:
-    ... invalid
-        ^
-
-	at org.snakeyaml.engine.v2.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:292)
-	at org.snakeyaml.engine.v2.parser.ParserImpl.lambda$produce$0(ParserImpl.java:185)
-	at java.util.Optional.ifPresent(Optional.java:159)
-	at org.snakeyaml.engine.v2.parser.ParserImpl.produce(ParserImpl.java:185)
-	at org.snakeyaml.engine.v2.parser.ParserImpl.hasNext(ParserImpl.java:210)
-	at org.yaml.editor.SnakeEngine2Events.yamlToEvents(SnakeEngine2Events.java:15)
-	at org.yaml.editor.SnakeEngine2Events.main(SnakeEngine2Events.java:23)
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="java-snakeengine-json">
-<h3><a href="#java-snakeengine-json">java-snakeengine-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; expected &#39;&lt;document start&gt;&#39;, but found &#39;&lt;scalar&gt;&#39;
- in &#39;reader&#39;, line 3, column 5:
-    ... invalid
-        ^
-
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:259)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
-	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:156)
-	at org.yaml.snakeyaml.composer.Composer.checkNode(Composer.java:90)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.checkData(BaseConstructor.java:124)
-	at org.yaml.snakeyaml.Yaml$1.hasNext(Yaml.java:509)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
-{
-  &quot;key&quot;: &quot;value&quot;
-}
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="java-snakeyaml-event">
-<h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; expected &#39;&lt;document start&gt;&#39;, but found &#39;&lt;scalar&gt;&#39;
- in &#39;reader&#39;, line 3, column 5:
-    ... invalid
-        ^
-
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:259)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
-	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
-	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:134)
-	at org.yaml.editor.Snake2Events.main(Snake2Events.java:142)
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="java-snakeyaml-json">
-<h3><a href="#java-snakeyaml-json">java-snakeyaml-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; expected &#39;&lt;document start&gt;&#39;, but found &#39;&lt;scalar&gt;&#39;
- in &#39;reader&#39;, line 3, column 5:
-    ... invalid
-        ^
-
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:259)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
-	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:156)
-	at org.yaml.snakeyaml.composer.Composer.checkNode(Composer.java:90)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.checkData(BaseConstructor.java:124)
-	at org.yaml.snakeyaml.Yaml$1.hasNext(Yaml.java:509)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
-{
-  &quot;key&quot;: &quot;value&quot;
-}
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="js-yaml-event">
 <h3><a href="#js-yaml-event">js-yaml-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Unexpected scalar at node end at line 3, column 5:
@@ -387,16 +274,22 @@ YAMLParseError: Unexpected scalar at node end at line 3, column 5:
 ... invalid
     ^^^^^^^
 
-    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
+    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:69:34)
     at Object.resolveEnd (/node/node_modules/yaml/dist/compose/resolve-end.js:31:21)
-    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:186:40)
+    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:184:40)
     at next (&lt;anonymous&gt;)
-    at Composer.compose (/node/node_modules/yaml/dist/compose/composer.js:134:25)
+    at Composer.compose (/node/node_modules/yaml/dist/compose/composer.js:131:25)
     at compose.next (&lt;anonymous&gt;)
     at Function.from (&lt;anonymous&gt;)
     at Object.parseAllDocuments (/node/node_modules/yaml/dist/public-api.js:28:24)
     at Object.&lt;anonymous&gt; (/yaml/bin/js-yaml-json:7:19)
-    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14) {
+  code: &#39;UNEXPECTED_TOKEN&#39;,
+  pos: [ 19, 26 ],
+  linePos: [ { line: 3, col: 5 }, { line: 3, col: 12 } ]
+}
+
+Node.js v20.13.1
 </pre>
  </div>
 
@@ -410,7 +303,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:325: in function &#39;parse&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:496: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x5557a4253f97
+	[C]: at 0x5561b9235ed0
 </pre>
  </div>
 
@@ -438,7 +331,7 @@ Expected  : EOL
 Got       : WS
 Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 392
 YAML      : &quot; invalid\n&quot;
-  at /yaml/bin/perl-pp-event line 25.
+  at /yaml/bin/perl-pp-event line 46.
 +STR
 +DOC ---
 +MAP
@@ -554,12 +447,14 @@ was found at document: 2, line: 3, column: 5
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-event&quot;, line 7, in &lt;module&gt;
     for event in yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 46, in parse
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 75, in parse
     while loader.check_event():
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+          ^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 174, in parse_document_start
-    self.peek_token().start_mark)
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 171, in parse_document_start
+    raise ParserError(None, None,
 yaml.parser.ParserError: expected &#39;&lt;document start&gt;&#39;, but found &#39;&lt;scalar&gt;&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 3, column 5:
     ... invalid
@@ -580,16 +475,20 @@ yaml.parser.ParserError: expected &#39;&lt;document start&gt;&#39;, but found &#
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 92, in load_all
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 129, in load_all
     while loader.check_data():
-  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 32, in check_data
+          ^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/constructor.py&quot;, line 32, in check_data
     return self.check_node()
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 18, in check_node
+           ^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 18, in check_node
     if self.check_event(StreamStartEvent):
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 174, in parse_document_start
-    self.peek_token().start_mark)
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 171, in parse_document_start
+    raise ParserError(None, None,
 yaml.parser.ParserError: expected &#39;&lt;document start&gt;&#39;, but found &#39;&lt;scalar&gt;&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 3, column 5:
     ... invalid
@@ -606,16 +505,20 @@ yaml.parser.ParserError: expected &#39;&lt;document start&gt;&#39;, but found &#
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-py&quot;, line 36, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 92, in load_all
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 129, in load_all
     while loader.check_data():
-  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 32, in check_data
+          ^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/constructor.py&quot;, line 32, in check_data
     return self.check_node()
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 18, in check_node
+           ^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 18, in check_node
     if self.check_event(StreamStartEvent):
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 174, in parse_document_start
-    self.peek_token().start_mark)
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 171, in parse_document_start
+    raise ParserError(None, None,
 yaml.parser.ParserError: expected &#39;&lt;document start&gt;&#39;, but found &#39;&lt;scalar&gt;&#39;
   in &quot;&lt;unicode string&gt;&quot;, line 3, column 5:
     ... invalid
@@ -625,29 +528,96 @@ yaml.parser.ParserError: expected &#39;&lt;document start&gt;&#39;, but found &#
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="raku-yamlish-json">
-<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Couldn&#39;t parse YAML
-  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
-  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-json line 6
+  <div class="framework framework_box_invalid_correct" id="py-ruamel-event">
+<h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-ruamel-event&quot;, line 9, in &lt;module&gt;
+    for event in yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/main.py&quot;, line 371, in parse
+    while parser.check_event():
+          ^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 141, in check_event
+    self.current_event = self.state()
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 255, in parse_document_end
+    raise ParserError(
+ruamel.yaml.parser.ParserError: found non-comment content after document end marker, (&#39;&lt;scalar&gt;&#39;,)
+  in &quot;&lt;unicode string&gt;&quot;, line 3, column 5:
+    ... invalid
+        ^ (line: 3)
++STR
++DOC ---
++MAP
+=VAL :key
+=VAL :value
+-MAP
 </pre>
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="raku-yamlish-raku">
-<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Couldn&#39;t parse YAML
-  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
-  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-raku line 6
+  <div class="framework framework_box_invalid_correct" id="py-ruamel-json">
+<h3><a href="#py-ruamel-json">py-ruamel-json</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-ruamel-json&quot;, line 21, in &lt;module&gt;
+    for doc in yaml.load_all(sys.stdin.read()):
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/main.py&quot;, line 476, in load_all
+    yield constructor.get_data()
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/constructor.py&quot;, line 110, in get_data
+    return self.construct_document(self.composer.get_node())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 63, in get_node
+    return self.compose_document()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 97, in compose_document
+    self.parser.get_event()
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 161, in get_event
+    self.current_event = self.state()
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 255, in parse_document_end
+    raise ParserError(
+ruamel.yaml.parser.ParserError: found non-comment content after document end marker, (&#39;&lt;scalar&gt;&#39;,)
+  in &quot;&lt;unicode string&gt;&quot;, line 3, column 5:
+    ... invalid
+        ^ (line: 3)
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_correct" id="py-ruamel-py">
+<h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
+  File &quot;/yaml/bin/py-ruamel-py&quot;, line 38, in &lt;module&gt;
+    for doc in yaml.load_all(sys.stdin.read()):
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/main.py&quot;, line 476, in load_all
+    yield constructor.get_data()
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/constructor.py&quot;, line 110, in get_data
+    return self.construct_document(self.composer.get_node())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 63, in get_node
+    return self.compose_document()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 97, in compose_document
+    self.parser.get_event()
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 161, in get_event
+    self.current_event = self.state()
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 255, in parse_document_end
+    raise ParserError(
+ruamel.yaml.parser.ParserError: found non-comment content after document end marker, (&#39;&lt;scalar&gt;&#39;,)
+  in &quot;&lt;unicode string&gt;&quot;, line 3, column 5:
+    ... invalid
+        ^ (line: 3)
 </pre>
  </div>
 
 
   <div class="framework framework_box_invalid_correct" id="ruby-psych-json">
 <h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/ruby/gems/psych/lib/psych.rb:459:in `parse&#39;: (&lt;unknown&gt;): did not find expected &lt;document start&gt; at line 1 column 1 (Psych::SyntaxError)
-	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
-	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/ruby/gems/psych/lib/psych.rb:458:in `parse&#39;: (&lt;unknown&gt;): did not find expected &lt;document start&gt; at line 1 column 1 (Psych::SyntaxError)
+	from /ruby/gems/psych/lib/psych.rb:458:in `parse_stream&#39;
+	from /ruby/gems/psych/lib/psych.rb:632:in `load_stream&#39;
 	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
 </pre>
  </div>

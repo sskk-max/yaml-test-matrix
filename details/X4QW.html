@@ -192,22 +192,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/X4QW.yaml">&test-X
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="raku-yamlish-json">
-<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{ &quot;block&quot; : &quot;scalar\n&quot; }
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="raku-yamlish-raku">
-<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{
-  block =&gt; &quot;scalar\n&quot;.Str,
-}
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_incorrect" id="ruby-psych-json">
 <h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{&quot;block&quot;:&quot;scalar\n&quot;}
@@ -323,136 +307,6 @@ Aborted (core dumped)
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="java-snakeengine-event">
-<h3><a href="#java-snakeengine-event">java-snakeengine-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; while scanning a block scalar
- in reader, line 1, column 8:
-    block: &gt;# comment
-           ^
-expected chomping or indentation indicators, but found #(35)
- in reader, line 1, column 9:
-    block: &gt;# comment
-            ^
-
-	at org.snakeyaml.engine.v2.scanner.ScannerImpl.scanBlockScalarIndicators(ScannerImpl.java:1655)
-	at org.snakeyaml.engine.v2.scanner.ScannerImpl.scanBlockScalar(ScannerImpl.java:1526)
-	at org.snakeyaml.engine.v2.scanner.ScannerImpl.fetchBlockScalar(ScannerImpl.java:944)
-	at org.snakeyaml.engine.v2.scanner.ScannerImpl.fetchFolded(ScannerImpl.java:928)
-	at org.snakeyaml.engine.v2.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:377)
-	at org.snakeyaml.engine.v2.scanner.ScannerImpl.checkToken(ScannerImpl.java:193)
-	at org.snakeyaml.engine.v2.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:704)
-	at org.snakeyaml.engine.v2.parser.ParserImpl.lambda$produce$0(ParserImpl.java:185)
-	at java.util.Optional.ifPresent(Optional.java:159)
-	at org.snakeyaml.engine.v2.parser.ParserImpl.produce(ParserImpl.java:185)
-	at org.snakeyaml.engine.v2.parser.ParserImpl.hasNext(ParserImpl.java:210)
-	at org.yaml.editor.SnakeEngine2Events.yamlToEvents(SnakeEngine2Events.java:15)
-	at org.yaml.editor.SnakeEngine2Events.main(SnakeEngine2Events.java:23)
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="java-snakeengine-json">
-<h3><a href="#java-snakeengine-json">java-snakeengine-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; while scanning a block scalar
- in &#39;reader&#39;, line 1, column 8:
-    block: &gt;# comment
-           ^
-expected chomping or indentation indicators, but found #(35)
- in &#39;reader&#39;, line 1, column 9:
-    block: &gt;# comment
-            ^
-
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanBlockScalarIndicators(ScannerImpl.java:1784)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanBlockScalar(ScannerImpl.java:1649)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchBlockScalar(ScannerImpl.java:1035)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchFolded(ScannerImpl.java:1017)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:426)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:674)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
-	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:59)
-	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:45)
-	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:140)
-	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:119)
-	at org.yaml.snakeyaml.composer.Composer.composeScalarNode(Composer.java:217)
-	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:187)
-	at org.yaml.snakeyaml.composer.Composer.composeKeyNode(Composer.java:313)
-	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:304)
-	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:289)
-	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:191)
-	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:116)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:135)
-	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="java-snakeyaml-event">
-<h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; while scanning a block scalar
- in &#39;reader&#39;, line 1, column 8:
-    block: &gt;# comment
-           ^
-expected chomping or indentation indicators, but found #(35)
- in &#39;reader&#39;, line 1, column 9:
-    block: &gt;# comment
-            ^
-
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanBlockScalarIndicators(ScannerImpl.java:1784)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanBlockScalar(ScannerImpl.java:1649)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchBlockScalar(ScannerImpl.java:1035)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchFolded(ScannerImpl.java:1017)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:426)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:674)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
-	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
-	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:134)
-	at org.yaml.editor.Snake2Events.main(Snake2Events.java:142)
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="java-snakeyaml-json">
-<h3><a href="#java-snakeyaml-json">java-snakeyaml-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; while scanning a block scalar
- in &#39;reader&#39;, line 1, column 8:
-    block: &gt;# comment
-           ^
-expected chomping or indentation indicators, but found #(35)
- in &#39;reader&#39;, line 1, column 9:
-    block: &gt;# comment
-            ^
-
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanBlockScalarIndicators(ScannerImpl.java:1784)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.scanBlockScalar(ScannerImpl.java:1649)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchBlockScalar(ScannerImpl.java:1035)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchFolded(ScannerImpl.java:1017)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:426)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockMappingValue.produce(ParserImpl.java:674)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
-	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:59)
-	at org.yaml.snakeyaml.comments.CommentEventsCollector$1.peek(CommentEventsCollector.java:45)
-	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:140)
-	at org.yaml.snakeyaml.comments.CommentEventsCollector.collectEvents(CommentEventsCollector.java:119)
-	at org.yaml.snakeyaml.composer.Composer.composeScalarNode(Composer.java:217)
-	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:187)
-	at org.yaml.snakeyaml.composer.Composer.composeKeyNode(Composer.java:313)
-	at org.yaml.snakeyaml.composer.Composer.composeMappingChildren(Composer.java:304)
-	at org.yaml.snakeyaml.composer.Composer.composeMappingNode(Composer.java:289)
-	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:191)
-	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:116)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:135)
-	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_correct" id="js-jsyaml-json">
 <h3><a href="#js-jsyaml-json">js-jsyaml-json</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>
@@ -473,7 +327,19 @@ YAMLException: a line break is expected (1:9)
     at composeNode (/node/node_modules/js-yaml/lib/loader.js:1441:12)
     at readDocument (/node/node_modules/js-yaml/lib/loader.js:1625:3)
     at loadDocuments (/node/node_modules/js-yaml/lib/loader.js:1688:5)
-    at Object.loadAll (/node/node_modules/js-yaml/lib/loader.js:1701:19)
+    at Object.loadAll (/node/node_modules/js-yaml/lib/loader.js:1701:19) {
+  reason: &#39;a line break is expected&#39;,
+  mark: {
+    name: null,
+    buffer: &#39;block: &gt;# comment\n  scalar\n&#39;,
+    position: 8,
+    line: 0,
+    column: 8,
+    snippet: &#39; 1 | block: &gt;# comment\n-------------^\n 2 |   scalar&#39;
+  }
+}
+
+Node.js v20.13.1
 </pre>
  </div>
 
@@ -507,16 +373,22 @@ YAMLParseError: Comments must be separated from other tokens by white space char
 block: &gt;# comment
         ^^^^^^^^^
 
-    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
-    at parseBlockScalarHeader (/node/node_modules/yaml/dist/compose/resolve-block-scalar.js:154:21)
+    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:69:34)
+    at parseBlockScalarHeader (/node/node_modules/yaml/dist/compose/resolve-block-scalar.js:161:21)
     at Object.resolveBlockScalar (/node/node_modules/yaml/dist/compose/resolve-block-scalar.js:7:20)
     at Object.composeScalar (/node/node_modules/yaml/dist/compose/compose-scalar.js:10:30)
-    at composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:23:34)
-    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:79:19)
-    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:36)
-    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
-    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:32:23)
-    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:152:40)
+    at composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:24:34)
+    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:81:19)
+    at resolveCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:27)
+    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:47:16)
+    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:31:38)
+    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:33:23) {
+  code: &#39;MISSING_CHAR&#39;,
+  pos: [ 8, 17 ],
+  linePos: [ { line: 1, col: 9 }, { line: 1, col: 18 } ]
+}
+
+Node.js v20.13.1
 </pre>
  </div>
 
@@ -539,9 +411,9 @@ Error: unhandled exception: Illegal character in block scalar header: &quot;#&qu
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 1
 Column    : 9
 Message   : Invalid block scalar
-Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 555
+Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 556
 YAML      : &quot;# comment&quot;
-  at /yaml/bin/perl-pp-event line 25.
+  at /yaml/bin/perl-pp-event line 46.
 +STR
 +DOC
 +MAP
@@ -555,7 +427,7 @@ YAML      : &quot;# comment&quot;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 1
 Column    : 9
 Message   : Invalid block scalar
-Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 555
+Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 556
 YAML      : &quot;# comment&quot;
   at /perl5/lib/perl5/YAML/PP/Loader.pm line 94.
 </pre>
@@ -567,7 +439,7 @@ YAML      : &quot;# comment&quot;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Line      : 1
 Column    : 9
 Message   : Invalid block scalar
-Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 555
+Where     : /perl5/lib/perl5/YAML/PP/Lexer.pm line 556
 YAML      : &quot;# comment&quot;
   at /perl5/lib/perl5/YAML/PP/Loader.pm line 94.
 </pre>
@@ -608,24 +480,30 @@ YAML      : &quot;# comment&quot;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-event&quot;, line 7, in &lt;module&gt;
     for event in yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 46, in parse
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 75, in parse
     while loader.check_event():
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+          ^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 449, in parse_block_mapping_value
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 449, in parse_block_mapping_value
     if not self.check_token(KeyToken, ValueToken, BlockEndToken):
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 116, in check_token
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 116, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 243, in fetch_more_tokens
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 243, in fetch_more_tokens
     return self.fetch_folded()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 638, in fetch_folded
+           ^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 638, in fetch_folded
     self.fetch_block_scalar(style=&#39;&gt;&#39;)
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 649, in fetch_block_scalar
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 649, in fetch_block_scalar
     self.tokens.append(self.scan_block_scalar(style))
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 989, in scan_block_scalar
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 989, in scan_block_scalar
     chomping, increment = self.scan_block_scalar_indicators(start_mark)
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 1089, in scan_block_scalar_indicators
-    % ch, self.get_mark())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 1087, in scan_block_scalar_indicators
+    raise ScannerError(&quot;while scanning a block scalar&quot;, start_mark,
 yaml.scanner.ScannerError: while scanning a block scalar
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 8:
     block: &gt;# comment
@@ -647,36 +525,48 @@ expected chomping or indentation indicators, but found &#39;#&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 130, in load_all
     yield loader.get_data()
-  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
+          ^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 27, in get_node
+                                   ^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 27, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 55, in compose_document
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 55, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 84, in compose_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 84, in compose_node
     node = self.compose_mapping_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 133, in compose_mapping_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 133, in compose_mapping_node
     item_value = self.compose_node(node, item_key)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 64, in compose_node
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 64, in compose_node
     if self.check_event(AliasEvent):
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 449, in parse_block_mapping_value
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 449, in parse_block_mapping_value
     if not self.check_token(KeyToken, ValueToken, BlockEndToken):
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 116, in check_token
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 116, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 243, in fetch_more_tokens
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 243, in fetch_more_tokens
     return self.fetch_folded()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 638, in fetch_folded
+           ^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 638, in fetch_folded
     self.fetch_block_scalar(style=&#39;&gt;&#39;)
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 649, in fetch_block_scalar
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 649, in fetch_block_scalar
     self.tokens.append(self.scan_block_scalar(style))
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 989, in scan_block_scalar
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 989, in scan_block_scalar
     chomping, increment = self.scan_block_scalar_indicators(start_mark)
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 1089, in scan_block_scalar_indicators
-    % ch, self.get_mark())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 1087, in scan_block_scalar_indicators
+    raise ScannerError(&quot;while scanning a block scalar&quot;, start_mark,
 yaml.scanner.ScannerError: while scanning a block scalar
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 8:
     block: &gt;# comment
@@ -694,36 +584,48 @@ expected chomping or indentation indicators, but found &#39;#&#39;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-py&quot;, line 36, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 130, in load_all
     yield loader.get_data()
-  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
+          ^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 27, in get_node
+                                   ^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 27, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 55, in compose_document
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 55, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 84, in compose_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 84, in compose_node
     node = self.compose_mapping_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 133, in compose_mapping_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 133, in compose_mapping_node
     item_value = self.compose_node(node, item_key)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 64, in compose_node
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 64, in compose_node
     if self.check_event(AliasEvent):
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 449, in parse_block_mapping_value
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 449, in parse_block_mapping_value
     if not self.check_token(KeyToken, ValueToken, BlockEndToken):
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 116, in check_token
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 116, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 243, in fetch_more_tokens
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 243, in fetch_more_tokens
     return self.fetch_folded()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 638, in fetch_folded
+           ^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 638, in fetch_folded
     self.fetch_block_scalar(style=&#39;&gt;&#39;)
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 649, in fetch_block_scalar
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 649, in fetch_block_scalar
     self.tokens.append(self.scan_block_scalar(style))
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 989, in scan_block_scalar
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 989, in scan_block_scalar
     chomping, increment = self.scan_block_scalar_indicators(start_mark)
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 1089, in scan_block_scalar_indicators
-    % ch, self.get_mark())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 1087, in scan_block_scalar_indicators
+    raise ScannerError(&quot;while scanning a block scalar&quot;, start_mark,
 yaml.scanner.ScannerError: while scanning a block scalar
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 8:
     block: &gt;# comment
@@ -739,26 +641,32 @@ expected chomping or indentation indicators, but found &#39;#&#39;
   <div class="framework framework_box_invalid_correct" id="py-ruamel-event">
 <h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-event&quot;, line 7, in &lt;module&gt;
-    for event in ruamel.yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1024, in parse
-    while loader._parser.check_event():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
+  File &quot;/yaml/bin/py-ruamel-event&quot;, line 9, in &lt;module&gt;
+    for event in yaml.parse(sys.stdin.read()):
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/main.py&quot;, line 371, in parse
+    while parser.check_event():
+          ^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 141, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 630, in parse_block_mapping_value
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 631, in parse_block_mapping_value
     if self.scanner.check_token(ValueToken):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 170, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 308, in fetch_more_tokens
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 298, in fetch_more_tokens
     return self.fetch_folded()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 717, in fetch_folded
+           ^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 683, in fetch_folded
     self.fetch_block_scalar(style=&#39;&gt;&#39;)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 726, in fetch_block_scalar
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 691, in fetch_block_scalar
     self.tokens.append(self.scan_block_scalar(style))
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1159, in scan_block_scalar
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 1112, in scan_block_scalar
     chomping, increment = self.scan_block_scalar_indicators(start_mark)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1316, in scan_block_scalar_indicators
-    self.reader.get_mark(),
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 1264, in scan_block_scalar_indicators
+    raise ScannerError(
 ruamel.yaml.scanner.ScannerError: while scanning a block scalar
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 8:
     block: &gt;# comment
@@ -778,38 +686,50 @@ expected chomping or indentation indicators, but found &#39;#&#39;
   <div class="framework framework_box_invalid_correct" id="py-ruamel-json">
 <h3><a href="#py-ruamel-json">py-ruamel-json</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-json&quot;, line 19, in &lt;module&gt;
-    for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
-    yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
+  File &quot;/yaml/bin/py-ruamel-json&quot;, line 21, in &lt;module&gt;
+    for doc in yaml.load_all(sys.stdin.read()):
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/main.py&quot;, line 476, in load_all
+    yield constructor.get_data()
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/constructor.py&quot;, line 110, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 63, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 99, in compose_document
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 94, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 143, in compose_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 130, in compose_node
     node = self.compose_mapping_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 223, in compose_mapping_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 211, in compose_mapping_node
     item_value = self.compose_node(node, item_key)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 113, in compose_node
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 106, in compose_node
     if self.parser.check_event(AliasEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 141, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 630, in parse_block_mapping_value
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 631, in parse_block_mapping_value
     if self.scanner.check_token(ValueToken):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 170, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 308, in fetch_more_tokens
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 298, in fetch_more_tokens
     return self.fetch_folded()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 717, in fetch_folded
+           ^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 683, in fetch_folded
     self.fetch_block_scalar(style=&#39;&gt;&#39;)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 726, in fetch_block_scalar
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 691, in fetch_block_scalar
     self.tokens.append(self.scan_block_scalar(style))
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1159, in scan_block_scalar
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 1112, in scan_block_scalar
     chomping, increment = self.scan_block_scalar_indicators(start_mark)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1316, in scan_block_scalar_indicators
-    self.reader.get_mark(),
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 1264, in scan_block_scalar_indicators
+    raise ScannerError(
 ruamel.yaml.scanner.ScannerError: while scanning a block scalar
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 8:
     block: &gt;# comment
@@ -825,38 +745,50 @@ expected chomping or indentation indicators, but found &#39;#&#39;
   <div class="framework framework_box_invalid_correct" id="py-ruamel-py">
 <h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-py&quot;, line 36, in &lt;module&gt;
-    for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
-    yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
+  File &quot;/yaml/bin/py-ruamel-py&quot;, line 38, in &lt;module&gt;
+    for doc in yaml.load_all(sys.stdin.read()):
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/main.py&quot;, line 476, in load_all
+    yield constructor.get_data()
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/constructor.py&quot;, line 110, in get_data
     return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 63, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 99, in compose_document
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 94, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 143, in compose_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 130, in compose_node
     node = self.compose_mapping_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 223, in compose_mapping_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 211, in compose_mapping_node
     item_value = self.compose_node(node, item_key)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 113, in compose_node
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/composer.py&quot;, line 106, in compose_node
     if self.parser.check_event(AliasEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 141, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 630, in parse_block_mapping_value
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/parser.py&quot;, line 631, in parse_block_mapping_value
     if self.scanner.check_token(ValueToken):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 170, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 308, in fetch_more_tokens
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 298, in fetch_more_tokens
     return self.fetch_folded()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 717, in fetch_folded
+           ^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 683, in fetch_folded
     self.fetch_block_scalar(style=&#39;&gt;&#39;)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 726, in fetch_block_scalar
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 691, in fetch_block_scalar
     self.tokens.append(self.scan_block_scalar(style))
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1159, in scan_block_scalar
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 1112, in scan_block_scalar
     chomping, increment = self.scan_block_scalar_indicators(start_mark)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 1316, in scan_block_scalar_indicators
-    self.reader.get_mark(),
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/ruamel/yaml/scanner.py&quot;, line 1264, in scan_block_scalar_indicators
+    raise ScannerError(
 ruamel.yaml.scanner.ScannerError: while scanning a block scalar
   in &quot;&lt;unicode string&gt;&quot;, line 1, column 8:
     block: &gt;# comment

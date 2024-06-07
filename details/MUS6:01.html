@@ -101,46 +101,10 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/MUS6.yaml">&test-M
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="java-snakeengine-event">
-<h3><a href="#java-snakeengine-event">java-snakeengine-event</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
-+DOC ---
-=VAL :
--DOC
-+DOC ---
-=VAL :
--DOC
--STR
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="java-snakeengine-json">
-<h3><a href="#java-snakeengine-json">java-snakeengine-json</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>null
-null
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="java-snakeyaml-event">
-<h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
-+DOC ---
-=VAL :
--DOC
-+DOC ---
-=VAL :
--DOC
--STR
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="java-snakeyaml-json">
-<h3><a href="#java-snakeyaml-json">java-snakeyaml-json</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>null
-null
+  <div class="framework framework_box_invalid_incorrect" id="lua-lyaml-json">
+<h3><a href="#lua-lyaml-json">lua-lyaml-json</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{}
+{}
 </pre>
  </div>
 
@@ -265,6 +229,14 @@ None
  </div>
 
 
+  <div class="framework framework_box_invalid_incorrect" id="ruby-psych-json">
+<h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>null
+null
+</pre>
+ </div>
+
+
   <div class="framework framework_box_invalid_incorrect" id="rust-yamlrust-event">
 <h3><a href="#rust-yamlrust-event">rust-yamlrust-event</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
@@ -376,10 +348,22 @@ YAMLException: end of the stream or a document separator is expected (3:1)
     at loadDocuments (/node/node_modules/js-yaml/lib/loader.js:1688:5)
     at Object.loadAll (/node/node_modules/js-yaml/lib/loader.js:1701:19)
     at Object.&lt;anonymous&gt; (/yaml/bin/js-jsyaml-json:7:13)
-    at Module._compile (internal/modules/cjs/loader.js:778:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
-    at Module.load (internal/modules/cjs/loader.js:653:32)
-    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Module._compile (node:internal/modules/cjs/loader:1358:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1416:10)
+    at Module.load (node:internal/modules/cjs/loader:1208:32)
+    at Module._load (node:internal/modules/cjs/loader:1024:12) {
+  reason: &#39;end of the stream or a document separator is expected&#39;,
+  mark: {
+    name: null,
+    buffer: &#39;%YAML 1.2\n---\n%YAML 1.2\n---\n&#39;,
+    position: 14,
+    line: 2,
+    column: 0,
+    snippet: &#39; 1 | %YAML 1.2\n 2 | ---\n 3 | %YAML 1.2\n-----^\n 4 | ---&#39;
+  }
+}
+
+Node.js v20.13.1
 </pre>
  </div>
 
@@ -409,30 +393,22 @@ YAMLParseError: Plain value cannot start with directive indicator character % at
 %YAML 1.2
 ^
 
-    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
+    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:69:34)
     at _onError (/node/node_modules/yaml/dist/compose/resolve-flow-scalar.js:10:42)
     at plainValue (/node/node_modules/yaml/dist/compose/resolve-flow-scalar.js:68:9)
     at Object.resolveFlowScalar (/node/node_modules/yaml/dist/compose/resolve-flow-scalar.js:14:21)
     at Object.composeScalar (/node/node_modules/yaml/dist/compose/compose-scalar.js:11:29)
-    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:23:34)
-    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:32:23)
-    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:152:40)
+    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:24:34)
+    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:33:23)
+    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:149:40)
     at next (&lt;anonymous&gt;)
-    at Composer.compose (/node/node_modules/yaml/dist/compose/composer.js:134:25)
-</pre>
- </div>
+    at Composer.compose (/node/node_modules/yaml/dist/compose/composer.js:131:25) {
+  code: &#39;BAD_SCALAR_START&#39;,
+  pos: [ 14, 15 ],
+  linePos: [ { line: 3, col: 1 }, { line: 3, col: 2 } ]
+}
 
-
-  <div class="framework framework_box_invalid_correct" id="lua-lyaml-json">
-<h3><a href="#lua-lyaml-json">lua-lyaml-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>luajit: 1:1: found incompatible YAML document
-stack traceback:
-	[C]: in function &#39;error&#39;
-	/usr/local/share/lua/5.1/lyaml/init.lua:306: in function &#39;error&#39;
-	/usr/local/share/lua/5.1/lyaml/init.lua:325: in function &#39;parse&#39;
-	/usr/local/share/lua/5.1/lyaml/init.lua:496: in function &#39;load&#39;
-	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x55bd0102df97
+Node.js v20.13.1
 </pre>
  </div>
 
@@ -445,7 +421,7 @@ Expected  : ALIAS BLOCK_SCALAR COLON DOC_END DOC_START EOL FLOWMAP_START FLOWSEQ
 Got       : YAML_DIRECTIVE
 Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 392
 YAML      : &quot;%YAML 1.2&quot;
-  at /yaml/bin/perl-pp-event line 25.
+  at /yaml/bin/perl-pp-event line 46.
 +STR
 +DOC ---
 </pre>
@@ -517,34 +493,6 @@ YAML      : &quot;%YAML 1.2&quot;
    Line: 1
    Document: 2
  at /perl5/lib/perl5/YAML/Loader.pm line 88.
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="raku-yamlish-json">
-<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Couldn&#39;t parse YAML
-  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
-  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-json line 6
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="raku-yamlish-raku">
-<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Couldn&#39;t parse YAML
-  in sub load-yamls at /raku/sources/44795C7AB0F35700F4CA9C3E2CC5C924EE4C608F (YAMLish) line 959
-  in block &lt;unit&gt; at /yaml/bin/raku-yamlish-raku line 6
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="ruby-psych-json">
-<h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/ruby/gems/psych/lib/psych.rb:459:in `parse&#39;: (&lt;unknown&gt;): found incompatible YAML document at line 1 column 1 (Psych::SyntaxError)
-	from /ruby/gems/psych/lib/psych.rb:459:in `parse_stream&#39;
-	from /ruby/gems/psych/lib/psych.rb:565:in `load_stream&#39;
-	from /yaml/bin/ruby-psych-json:6:in `&lt;main&gt;&#39;
 </pre>
  </div>
 

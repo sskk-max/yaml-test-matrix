@@ -131,53 +131,9 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/Y79Y.yaml">&test-Y
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="java-snakeengine-event">
-<h3><a href="#java-snakeengine-event">java-snakeengine-event</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
-+DOC
-+SEQ
-+SEQ []
-=VAL :foo
-=VAL :foo
--SEQ
--SEQ
--DOC
--STR
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_incorrect" id="js-jsyaml-json">
 <h3><a href="#js-jsyaml-json">js-jsyaml-json</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>[[&quot;foo&quot;,&quot;foo&quot;]]
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="js-yaml-event">
-<h3><a href="#js-yaml-event">js-yaml-event</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
-+DOC
-+SEQ
-+SEQ []
-=VAL :foo
-=VAL :foo
--SEQ
--SEQ
--DOC
--STR
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="js-yaml-json">
-<h3><a href="#js-yaml-json">js-yaml-json</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>[
-  [
-    &quot;foo&quot;,
-    &quot;foo&quot;
-  ]
-]
 </pre>
  </div>
 
@@ -261,21 +217,37 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/Y79Y.yaml">&test-Y
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="raku-yamlish-json">
-<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>[ [ &quot;foo&quot;, &quot;foo&quot; ] ]
+  <div class="framework framework_box_invalid_incorrect" id="py-ruamel-event">
+<h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
++DOC
++SEQ
++SEQ []
+=VAL :foo
+=VAL :foo
+-SEQ
+-SEQ
+-DOC
+-STR
 </pre>
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="raku-yamlish-raku">
-<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
+  <div class="framework framework_box_invalid_incorrect" id="py-ruamel-json">
+<h3><a href="#py-ruamel-json">py-ruamel-json</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>[
   [
-    &quot;foo&quot;.Str,
-    &quot;foo&quot;.Str,
-  ],
+    &quot;foo&quot;,
+    &quot;foo&quot;
+  ]
 ]
+</pre>
+ </div>
+
+
+  <div class="framework framework_box_invalid_incorrect" id="py-ruamel-py">
+<h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
+<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>[[&#39;foo&#39;, &#39;foo&#39;]]
 </pre>
  </div>
 
@@ -345,75 +317,55 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/Y79Y.yaml">&test-Y
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="java-snakeengine-json">
-<h3><a href="#java-snakeengine-json">java-snakeengine-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; while scanning for the next token
-found character &#39;\t(TAB)&#39; that cannot start any token. (Do not use \t(TAB) for indentation)
- in &#39;reader&#39;, line 2, column 1:
-    	foo,
-    ^
+  <div class="framework framework_box_invalid_correct" id="js-yaml-event">
+<h3><a href="#js-yaml-event">js-yaml-event</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Flow sequence in block collection must be sufficiently indented and end with a ] at line 2, column 2:
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:461)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockSequenceEntryValue.produce(ParserImpl.java:576)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockSequenceEntryKey.produce(ParserImpl.java:552)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockSequenceFirstEntry.produce(ParserImpl.java:540)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
-	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:156)
-	at org.yaml.snakeyaml.composer.Composer.composeSequenceNode(Composer.java:243)
-	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:189)
-	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:116)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:135)
-	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
+	foo,
+ foo
+ ]
+ ^
++STR
++DOC
++SEQ
++SEQ []
+-SEQ
+-SEQ
+-DOC
+-STR
 </pre>
  </div>
 
 
-  <div class="framework framework_box_invalid_correct" id="java-snakeyaml-event">
-<h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; while scanning for the next token
-found character &#39;\t(TAB)&#39; that cannot start any token. (Do not use \t(TAB) for indentation)
- in &#39;reader&#39;, line 2, column 1:
-    	foo,
-    ^
+  <div class="framework framework_box_invalid_correct" id="js-yaml-json">
+<h3><a href="#js-yaml-json">js-yaml-json</a></h3>
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>/yaml/bin/js-yaml-json:8
+  if (doc.errors.length !== 0) throw doc.errors[0]
+                               ^
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:461)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockSequenceEntryValue.produce(ParserImpl.java:576)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockSequenceEntryKey.produce(ParserImpl.java:552)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockSequenceFirstEntry.produce(ParserImpl.java:540)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
-	at org.yaml.snakeyaml.Yaml$3.hasNext(Yaml.java:677)
-	at org.yaml.editor.Snake2Events.yamlToEvents(Snake2Events.java:134)
-	at org.yaml.editor.Snake2Events.main(Snake2Events.java:142)
-</pre>
- </div>
+YAMLParseError: Flow sequence in block collection must be sufficiently indented and end with a ] at line 2, column 2:
 
+	foo,
+ foo
+ ]
+ ^
 
-  <div class="framework framework_box_invalid_correct" id="java-snakeyaml-json">
-<h3><a href="#java-snakeyaml-json">java-snakeyaml-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Exception in thread &quot;main&quot; while scanning for the next token
-found character &#39;\t(TAB)&#39; that cannot start any token. (Do not use \t(TAB) for indentation)
- in &#39;reader&#39;, line 2, column 1:
-    	foo,
-    ^
+    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:69:34)
+    at Object.resolveFlowCollection (/node/node_modules/yaml/dist/compose/resolve-flow-collection.js:181:9)
+    at resolveCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:16:37)
+    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:47:16)
+    at composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:31:38)
+    at Object.resolveBlockSeq (/node/node_modules/yaml/dist/compose/resolve-block-seq.js:37:15)
+    at resolveCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:15:31)
+    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:47:16)
+    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:31:38)
+    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:33:23) {
+  code: &#39;BAD_INDENT&#39;,
+  pos: [ 5, 6 ],
+  linePos: [ { line: 2, col: 2 }, { line: 2, col: 3 } ]
+}
 
-	at org.yaml.snakeyaml.scanner.ScannerImpl.fetchMoreTokens(ScannerImpl.java:461)
-	at org.yaml.snakeyaml.scanner.ScannerImpl.checkToken(ScannerImpl.java:251)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockSequenceEntryValue.produce(ParserImpl.java:576)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockSequenceEntryKey.produce(ParserImpl.java:552)
-	at org.yaml.snakeyaml.parser.ParserImpl$ParseBlockSequenceFirstEntry.produce(ParserImpl.java:540)
-	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:166)
-	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:156)
-	at org.yaml.snakeyaml.composer.Composer.composeSequenceNode(Composer.java:243)
-	at org.yaml.snakeyaml.composer.Composer.composeNode(Composer.java:189)
-	at org.yaml.snakeyaml.composer.Composer.getNode(Composer.java:116)
-	at org.yaml.snakeyaml.constructor.BaseConstructor.getData(BaseConstructor.java:135)
-	at org.yaml.snakeyaml.Yaml$1.next(Yaml.java:514)
-	at org.yaml.editor.Snake2Json.yamlToJson(Snake2Json.java:20)
-	at org.yaml.editor.Snake2Json.main(Snake2Json.java:27)
+Node.js v20.13.1
 </pre>
  </div>
 
@@ -444,7 +396,7 @@ Column    : 1
 Message   : Bad indendation in FLOWSEQ
 Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 199
 YAML      : &quot;\tfoo,\n&quot;
-  at /yaml/bin/perl-pp-event line 25.
+  at /yaml/bin/perl-pp-event line 46.
 +STR
 +DOC
 +SEQ
@@ -525,18 +477,22 @@ YAML      : &quot;\tfoo,\n&quot;
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-event&quot;, line 7, in &lt;module&gt;
     for event in yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 46, in parse
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 75, in parse
     while loader.check_event():
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+          ^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 379, in parse_block_sequence_first_entry
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 379, in parse_block_sequence_first_entry
     return self.parse_block_sequence_entry()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 384, in parse_block_sequence_entry
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 384, in parse_block_sequence_entry
     if not self.check_token(BlockEntryToken, BlockEndToken):
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 116, in check_token
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 116, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 260, in fetch_more_tokens
-    self.get_mark())
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 258, in fetch_more_tokens
+    raise ScannerError(&quot;while scanning for the next token&quot;, None,
 yaml.scanner.ScannerError: while scanning for the next token
 found character &#39;\t&#39; that cannot start any token
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
@@ -554,28 +510,37 @@ found character &#39;\t&#39; that cannot start any token
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-json&quot;, line 19, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 130, in load_all
     yield loader.get_data()
-  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
+          ^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 27, in get_node
+                                   ^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 27, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 55, in compose_document
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 55, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 82, in compose_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 82, in compose_node
     node = self.compose_sequence_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 110, in compose_sequence_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 110, in compose_sequence_node
     while not self.check_event(SequenceEndEvent):
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 379, in parse_block_sequence_first_entry
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 379, in parse_block_sequence_first_entry
     return self.parse_block_sequence_entry()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 384, in parse_block_sequence_entry
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 384, in parse_block_sequence_entry
     if not self.check_token(BlockEntryToken, BlockEndToken):
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 116, in check_token
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 116, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 260, in fetch_more_tokens
-    self.get_mark())
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 258, in fetch_more_tokens
+    raise ScannerError(&quot;while scanning for the next token&quot;, None,
 yaml.scanner.ScannerError: while scanning for the next token
 found character &#39;\t&#39; that cannot start any token
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
@@ -590,134 +555,42 @@ found character &#39;\t&#39; that cannot start any token
 <span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
   File &quot;/yaml/bin/py-pyyaml-py&quot;, line 36, in &lt;module&gt;
     for doc in yaml.load_all(sys.stdin.read(), Loader=yaml.FullLoader):
-  File &quot;/python/lib/python3.7/site-packages/yaml/__init__.py&quot;, line 93, in load_all
+  File &quot;/python/lib/python3.12/site-packages/yaml/__init__.py&quot;, line 130, in load_all
     yield loader.get_data()
-  File &quot;/python/lib/python3.7/site-packages/yaml/constructor.py&quot;, line 45, in get_data
+          ^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/constructor.py&quot;, line 45, in get_data
     return self.construct_document(self.get_node())
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 27, in get_node
+                                   ^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 27, in get_node
     return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 55, in compose_document
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 55, in compose_document
     node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 82, in compose_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 82, in compose_node
     node = self.compose_sequence_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/yaml/composer.py&quot;, line 110, in compose_sequence_node
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/composer.py&quot;, line 110, in compose_sequence_node
     while not self.check_event(SequenceEndEvent):
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 98, in check_event
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 98, in check_event
     self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 379, in parse_block_sequence_first_entry
+                         ^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 379, in parse_block_sequence_first_entry
     return self.parse_block_sequence_entry()
-  File &quot;/python/lib/python3.7/site-packages/yaml/parser.py&quot;, line 384, in parse_block_sequence_entry
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/parser.py&quot;, line 384, in parse_block_sequence_entry
     if not self.check_token(BlockEntryToken, BlockEndToken):
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 116, in check_token
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 116, in check_token
     self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/yaml/scanner.py&quot;, line 260, in fetch_more_tokens
-    self.get_mark())
+  File &quot;/python/lib/python3.12/site-packages/yaml/scanner.py&quot;, line 258, in fetch_more_tokens
+    raise ScannerError(&quot;while scanning for the next token&quot;, None,
 yaml.scanner.ScannerError: while scanning for the next token
 found character &#39;\t&#39; that cannot start any token
   in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
     	foo,
     ^
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="py-ruamel-event">
-<h3><a href="#py-ruamel-event">py-ruamel-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-event&quot;, line 7, in &lt;module&gt;
-    for event in ruamel.yaml.parse(sys.stdin.read()):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1024, in parse
-    while loader._parser.check_event():
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
-    self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 526, in parse_block_sequence_first_entry
-    return self.parse_block_sequence_entry()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 533, in parse_block_sequence_entry
-    if not self.scanner.check_token(BlockEntryToken, BlockEndToken):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
-    self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 327, in fetch_more_tokens
-    self.reader.get_mark(),
-ruamel.yaml.scanner.ScannerError: while scanning for the next token
-found character &#39;\t&#39; that cannot start any token
-  in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
-    	foo,
-    ^ (line: 2)
-+STR
-+DOC
-+SEQ
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="py-ruamel-json">
-<h3><a href="#py-ruamel-json">py-ruamel-json</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-json&quot;, line 19, in &lt;module&gt;
-    for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
-    yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
-    return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
-    return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 99, in compose_document
-    node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 141, in compose_node
-    node = self.compose_sequence_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 184, in compose_sequence_node
-    while not self.parser.check_event(SequenceEndEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
-    self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 526, in parse_block_sequence_first_entry
-    return self.parse_block_sequence_entry()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 533, in parse_block_sequence_entry
-    if not self.scanner.check_token(BlockEntryToken, BlockEndToken):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
-    self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 327, in fetch_more_tokens
-    self.reader.get_mark(),
-ruamel.yaml.scanner.ScannerError: while scanning for the next token
-found character &#39;\t&#39; that cannot start any token
-  in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
-    	foo,
-    ^ (line: 2)
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_correct" id="py-ruamel-py">
-<h3><a href="#py-ruamel-py">py-ruamel-py</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Traceback (most recent call last):
-  File &quot;/yaml/bin/py-ruamel-py&quot;, line 36, in &lt;module&gt;
-    for doc in ruamel.yaml.load_all(sys.stdin.read(), Loader=ruamel.yaml.Loader):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/main.py&quot;, line 1097, in load_all
-    yield loader._constructor.get_data()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/constructor.py&quot;, line 114, in get_data
-    return self.construct_document(self.composer.get_node())
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 66, in get_node
-    return self.compose_document()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 99, in compose_document
-    node = self.compose_node(None, None)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 141, in compose_node
-    node = self.compose_sequence_node(anchor)
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/composer.py&quot;, line 184, in compose_sequence_node
-    while not self.parser.check_event(SequenceEndEvent):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 146, in check_event
-    self.current_event = self.state()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 526, in parse_block_sequence_first_entry
-    return self.parse_block_sequence_entry()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/parser.py&quot;, line 533, in parse_block_sequence_entry
-    if not self.scanner.check_token(BlockEntryToken, BlockEndToken):
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 175, in check_token
-    self.fetch_more_tokens()
-  File &quot;/python/lib/python3.7/site-packages/ruamel/yaml/scanner.py&quot;, line 327, in fetch_more_tokens
-    self.reader.get_mark(),
-ruamel.yaml.scanner.ScannerError: while scanning for the next token
-found character &#39;\t&#39; that cannot start any token
-  in &quot;&lt;unicode string&gt;&quot;, line 2, column 1:
-    	foo,
-    ^ (line: 2)
 </pre>
  </div>
 

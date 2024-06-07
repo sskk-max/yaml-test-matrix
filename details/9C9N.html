@@ -131,68 +131,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/9C9N.yaml">&test-9
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="java-snakeengine-event">
-<h3><a href="#java-snakeengine-event">java-snakeengine-event</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
-+DOC ---
-+MAP
-=VAL :flow
-+SEQ []
-=VAL :a
-=VAL :b
-=VAL :c
--SEQ
--MAP
--DOC
--STR
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="java-snakeengine-json">
-<h3><a href="#java-snakeengine-json">java-snakeengine-json</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{
-  &quot;flow&quot;: [
-    &quot;a&quot;,
-    &quot;b&quot;,
-    &quot;c&quot;
-  ]
-}
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="java-snakeyaml-event">
-<h3><a href="#java-snakeyaml-event">java-snakeyaml-event</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>+STR
-+DOC ---
-+MAP
-=VAL :flow
-+SEQ []
-=VAL :a
-=VAL :b
-=VAL :c
--SEQ
--MAP
--DOC
--STR
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="java-snakeyaml-json">
-<h3><a href="#java-snakeyaml-json">java-snakeyaml-json</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{
-  &quot;flow&quot;: [
-    &quot;a&quot;,
-    &quot;b&quot;,
-    &quot;c&quot;
-  ]
-}
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_incorrect" id="js-jsyaml-json">
 <h3><a href="#js-jsyaml-json">js-jsyaml-json</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{&quot;flow&quot;:[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]}
@@ -361,26 +299,6 @@ href="https://github.com/yaml/yaml-test-suite/blob/master/src/9C9N.yaml">&test-9
  </div>
 
 
-  <div class="framework framework_box_invalid_incorrect" id="raku-yamlish-json">
-<h3><a href="#raku-yamlish-json">raku-yamlish-json</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{ &quot;flow&quot; : [ &quot;a&quot;, &quot;b&quot;, &quot;c&quot; ] }
-</pre>
- </div>
-
-
-  <div class="framework framework_box_invalid_incorrect" id="raku-yamlish-raku">
-<h3><a href="#raku-yamlish-raku">raku-yamlish-raku</a></h3>
-<span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{
-  flow =&gt; [
-    &quot;a&quot;.Str,
-    &quot;b&quot;.Str,
-    &quot;c&quot;.Str,
-  ],
-}
-</pre>
- </div>
-
-
   <div class="framework framework_box_invalid_incorrect" id="ruby-psych-json">
 <h3><a href="#ruby-psych-json">ruby-psych-json</a></h3>
 <span class="status_box color_invalid_incorrect">&nbsp;</span>invalid_incorrect <pre>{&quot;flow&quot;:[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]}
@@ -528,16 +446,22 @@ flow: [a,
 b,
 ^
 
-    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:71:34)
-    at Object.resolveFlowCollection (/node/node_modules/yaml/dist/compose/resolve-flow-collection.js:182:9)
-    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:21:42)
-    at composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
-    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:79:19)
-    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:36)
-    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:30:38)
-    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:32:23)
-    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:152:40)
-    at next (&lt;anonymous&gt;)
+    at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:69:34)
+    at Object.resolveFlowCollection (/node/node_modules/yaml/dist/compose/resolve-flow-collection.js:181:9)
+    at resolveCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:16:37)
+    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:47:16)
+    at composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:31:38)
+    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:81:19)
+    at resolveCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:27)
+    at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:47:16)
+    at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:31:38)
+    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:33:23) {
+  code: &#39;BAD_INDENT&#39;,
+  pos: [ 14, 15 ],
+  linePos: [ { line: 3, col: 1 }, { line: 3, col: 2 } ]
+}
+
+Node.js v20.13.1
 </pre>
  </div>
 
@@ -569,7 +493,7 @@ Column    : 1
 Message   : Bad indendation in FLOWSEQ
 Where     : /perl5/lib/perl5/YAML/PP/Parser.pm line 199
 YAML      : &quot;b,\n&quot;
-  at /yaml/bin/perl-pp-event line 25.
+  at /yaml/bin/perl-pp-event line 46.
 +STR
 +DOC ---
 +MAP
