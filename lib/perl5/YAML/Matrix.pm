@@ -10,7 +10,6 @@ use base 'Exporter';
 our @EXPORT_OK = qw/
     minimal_events minimal_events_for_framework
     hsyaml_event_to_event
-    rapidyaml_event_to_event
     generate_expected_output
     load_csv gather_tags
 /;
@@ -24,8 +23,7 @@ sub minimal_events_for_framework {
         $args{no_quoting_style} = 1;
     }
     elsif ($type eq 'rapid') {
-        $args{no_quoting_style} = 1;
-        $args{no_flow_indicator} = 1;
+        $args{no_explicit_doc_end} = 1;
     }
     elsif ($type eq 'flow') {
         $args{no_flow_indicator} = 1;
@@ -51,6 +49,9 @@ sub minimal_events {
             $event = '+DOC';
         }
         elsif ($args->{no_explicit_doc} and $event =~ m/^-DOC \.\.\./) {
+            $event = '-DOC';
+        }
+        elsif ($args->{no_explicit_doc_end} and $event =~ m/^[+-]DOC \.\.\./) {
             $event = '-DOC';
         }
         elsif ($args->{no_quoting_style} and $event =~ s/^=VAL//) {
@@ -101,14 +102,6 @@ sub hsyaml_event_to_event {
     for my $event (@events) {
         $event =~ s/^\+MAP \{\}/+MAP/;
         $event =~ s/^\+SEQ \[\]/+SEQ/;
-    }
-    return @events;
-}
-
-sub rapidyaml_event_to_event {
-    my (@events) = @_;
-    for my $event (@events) {
-        $event =~ s/^(\=VAL (&\S+ )?(<[^>]+> )?)["']/$1:/;
     }
     return @events;
 }

@@ -16,7 +16,6 @@ use YAML::PP;
 use YAML::Matrix qw/
     minimal_events
     hsyaml_event_to_event
-    rapidyaml_event_to_event
     generate_expected_output
     load_csv gather_tags
 /;
@@ -227,7 +226,6 @@ sub compare_tests {
                     ->file("$matrixdir/expected/$id/minimal.rapid.event")
                     ->encoding('utf-8')->chomp->slurp;
                 $tests->{ $id }->{minimal_events} = \@test_events;
-                @events = rapidyaml_event_to_event(@events);
                 $tests->{ $id }->{transformed_events} = \@events;
             }
             elsif ($view eq "rust-yamlrust.event") {
