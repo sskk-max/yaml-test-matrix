@@ -249,7 +249,7 @@ Aborted (core dumped)
 
   <div class="framework framework_box_invalid_correct" id="js-yaml-event">
 <h3><a href="#js-yaml-event">js-yaml-event</a></h3>
-<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Tabs are not allowed as indentation at line 2, column 1:
+<span class="status_box color_invalid_correct">&nbsp;</span>invalid_correct <pre>Block scalar values in collections must be indented at line 2, column 1:
 
 foo: |
 	
@@ -258,7 +258,7 @@ foo: |
 +DOC
 +MAP
 =VAL :foo
-=VAL |
+=VAL |\t\n
 </pre>
  </div>
 
@@ -269,23 +269,23 @@ foo: |
   if (doc.errors.length !== 0) throw doc.errors[0]
                                ^
 
-YAMLParseError: Tabs are not allowed as indentation at line 2, column 1:
+YAMLParseError: Block scalar values in collections must be indented at line 2, column 1:
 
 foo: |
 	
 ^
 
     at Composer.onError (/node/node_modules/yaml/dist/compose/composer.js:69:34)
-    at Object.resolveProps (/node/node_modules/yaml/dist/compose/resolve-props.js:34:21)
-    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:21:39)
+    at Object.resolveBlockScalar (/node/node_modules/yaml/dist/compose/resolve-block-scalar.js:51:17)
+    at Object.composeScalar (/node/node_modules/yaml/dist/compose/compose-scalar.js:10:30)
+    at composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:24:34)
+    at Object.resolveBlockMap (/node/node_modules/yaml/dist/compose/resolve-block-map.js:83:19)
     at resolveCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:13:27)
     at Object.composeCollection (/node/node_modules/yaml/dist/compose/compose-collection.js:47:16)
     at Object.composeNode (/node/node_modules/yaml/dist/compose/compose-node.js:31:38)
-    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:33:23)
-    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:149:40)
-    at next (&lt;anonymous&gt;)
-    at Composer.compose (/node/node_modules/yaml/dist/compose/composer.js:131:25) {
-  code: &#39;TAB_AS_INDENT&#39;,
+    at Object.composeDoc (/node/node_modules/yaml/dist/compose/compose-doc.js:34:23)
+    at Composer.next (/node/node_modules/yaml/dist/compose/composer.js:149:40) {
+  code: &#39;BAD_INDENT&#39;,
   pos: [ 7, 8 ],
   linePos: [ { line: 2, col: 1 }, { line: 2, col: 2 } ]
 }
@@ -306,7 +306,7 @@ stack traceback:
 	/usr/local/share/lua/5.1/lyaml/init.lua:378: in function &#39;load_node&#39;
 	/usr/local/share/lua/5.1/lyaml/init.lua:497: in function &#39;load&#39;
 	/yaml/bin/lua-lyaml-json:6: in main chunk
-	[C]: at 0x562b6fda1ed0
+	[C]: at 0x559b4ff37ed0
 </pre>
  </div>
 
