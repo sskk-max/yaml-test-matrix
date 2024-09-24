@@ -43,7 +43,7 @@ yaml-test-suite:
 	git clone https://github.com/yaml/yaml-test-suite $@
 
 data: yaml-test-suite
-	make -C yaml-test-suite data
+	make -C yaml-test-suite data 1
 	cd yaml-test-suite/data && git checkout data-2022-01-17
 
 gh-pages:
