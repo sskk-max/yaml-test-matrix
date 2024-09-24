@@ -34,7 +34,7 @@ build: data matrix
 
 #$(ALL_VIEWS): data matrix
 #	time ./bin/run-framework-tests --framework $@
-#	./bin/create-matrix
+#	./bin/create-matrix123
 
 matrix:
 	mkdir -p $@
